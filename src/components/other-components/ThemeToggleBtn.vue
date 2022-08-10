@@ -26,7 +26,7 @@
 }
 
 .sun {
-  box-shadow: 0px 0px 67px 10px rgba(231, 166, 26, 1);
+  box-shadow: 0px 0px 17px 1px rgba(231, 166, 26, 0.6);
 }
 
 </style>
