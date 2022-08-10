@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Poppins:ital,wght@0,400;0,600;1,500&display=swap');
+
+
+.v-application {
+  [class*='text-'] {
+    color: #36405a;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.fs-nunito {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.fs-poppins {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+body, html {
+  scroll-behavior: smooth;
+}
+
+.app-padding {
+  padding-left: 13%;
+  padding-right: 13%;
+}
+
+p {
+  letter-spacing: 0.05em;
+}
+
+.un:after {
+  content: '';
+  width: 20px;
+  height: 2px;
+  margin-top: 3px;
+  display: block;
+  background: rgb(var(--v-theme-stroke-2), 1);
+  transition-duration: 800ms;
+}
+
+.shadow-text {
+  position: relative;
+  left: 0;
+  z-index: 1;
+  font-weight: bolder;
+  font-size: 11rem;
+  line-height: 60%;
+  text-align: center;
+  color: rgb(var(--v-theme-stroke-1), 0.04) !important;
+}
+
+@media screen and (max-width: 1260px) {
+  .app-padding {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+  .shadow-text {
+    font-size: 3.4rem;
+    line-height: 60%;
+  }
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+//animation
+.move-animation {
+  position: relative;
+  animation: move 10s ease-in-out infinite;
+}
+
+.move-animation-2 {
+  position: relative;
+  animation: move 20s ease-in-out infinite;
+}
+
+.move-animation-3 {
+  position: relative;
+  animation: move3 35s ease-in-out infinite;
+}
+
+.move-animation-4 {
+  position: relative;
+  animation: move4 25s linear infinite;
+}
+
+.spin-animation {
+  transform-origin: center;
+  animation: spin-360 5s ease-in-out infinite;
+}
+
+
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes move4 {
+  100%, 0% {
+    left: 40px;
+  }
+  50% {
+    left: -100px;
+  }
+}
+
+@keyframes move3 {
+  100%,
+  0% {
+    left: -60px;
+    top: 20px;
+  }
+  90%, 10% {
+    left: 40px;
+    top: -30px;
+  }
+  80%, 20% {
+    left: -20px;
+    top: -60px;
+  }
+  70%, 30% {
+    left: 40px;
+    top: -90px;
+  }
+  60%, 40% {
+    left: -20px;
+    top: -120px;
+  }
+  50% {
+    left: 40px;
+    top: -150px;
+  }
+}
+
+@keyframes spin-360 {
+  33% {
+    transform: rotate(120deg);
+  }
+  66% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
