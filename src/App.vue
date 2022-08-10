@@ -28,8 +28,12 @@
   background-image: url('@/assets/images/light/bg-Img.svg');
 }
 
-.bg-img-mobile {
+.bg-img-mobile-dark {
   background-image: url('@/assets/images/dark/bg-img-mobile.svg');
+}
+
+.bg-img-mobile-light {
+  background-image: url('@/assets/images/light/bg-img-mobile.svg');
 }
 </style>
 
@@ -52,7 +56,7 @@ export default {
   methods: {
     getClassName() {
       if (this.$vuetify.display.mobile) {
-        return "bg-img-mobile"
+        return "bg-img-mobile-" + this.$store.state.currentTheme
       } else {
         return "bg-img-" + this.$store.state.currentTheme
       }
