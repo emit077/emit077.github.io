@@ -20,8 +20,10 @@
             <div>
               <p class="text-h6 text-stroke-2 font-weight-bold p-title un mb-3"> {{ project.title }} </p>
               <small class="text-stroke-12 font-weight-regular ">{{ project.description }}</small>
-              <img :src="require('@/assets/images/dark/external-link.svg')" alt="external-link"
-                   class="external-link mr-4 mb-4 ">
+              <a :href="project.working_link" target="_blank" class="text-decoration-none">
+                <img :src="require('@/assets/images/dark/external-link.svg')" alt="external-link"
+                     class="external-link mr-4 mb-4 ">
+              </a>
             </div>
           </div>
         </v-expand-transition>

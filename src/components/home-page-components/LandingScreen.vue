@@ -4,18 +4,18 @@
        :style="style"
        :class="$vuetify.display.mobile?'pt-5landing-screen-'+$store.state.currentTheme :'text-h6 landing-screen-'+$store.state.currentTheme">
     <v-row align="center" justify="center" no-gutters>
-      <v-col sm="6" cols="12" class="justify-center ">
+      <v-col sm="6" cols="12" class="justify-center" :class="$vuetify.display.mobile?'py-15 my-15':''">
         <p class="font-weight-bold  mb-5 text-stroke-1 ml-2"
            :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">Hey I'm</p>
         <h1 class=" font-weight-bold text-stroke-1"
             :class="$vuetify.display.mobile?'text-h2 ':' text-h1'">Amit<br>Kumar</h1>
-        <zig-zag-line class="move-animation-2" :stroke="'#F3B24A'" :height="$vuetify.display.mobile?9:13"/>
+        <zig-zag-line class="move-animation-2" :stroke="'#F3B24A'" :height="$vuetify.display.mobile?8:13"/>
       </v-col>
       <v-col sm="6" cols="12" class="justify-center text-stroke-1">
         <circle-outline class="float-right move-animation" :stroke="'#F85C5C'" style="width: 15px"/>
         <common-content-wrapper :title="title" :subtitle="subtitle" :description="description"/>
         <triangle-outline class="spin-animation" style="width: 15px"
-                         :class="$vuetify.display.mobile?'float-right':'mt-8'"/>
+                          :class="$vuetify.display.mobile?'float-right':'mt-8'"/>
       </v-col>
     </v-row>
   </div>

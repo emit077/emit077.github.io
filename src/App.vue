@@ -1,7 +1,7 @@
 <template>
   <v-app :theme="$store.state.currentTheme" class="bg-img" :class="'bg-img-'+$store.state.currentTheme">
     <app-bar/>
-    <v-main>
+    <v-main class="main-body">
       <router-view/>
     </v-main>
     <app-footer/>
@@ -9,6 +9,10 @@
 </template>
 <style lang="scss">
 @import "./assets/css/style.scss";
+
+.main-body {
+  overflow-x: hidden !important;
+}
 
 .bg-img {
   transition: background-color 0.5s linear, color 0.5s linear;

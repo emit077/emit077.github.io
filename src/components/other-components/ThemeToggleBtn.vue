@@ -29,7 +29,6 @@
   box-shadow: 0px 0px 67px 10px rgba(231, 166, 26, 1);
 }
 
-
 </style>
 <!--   -->
 <script>
@@ -38,16 +37,9 @@ export default {
   data() {
     return {
       is_dark: true,
-      style: {
-        height: screen.height - 150 + "px",
-      }
     }
   },
   mounted() {
-    this.style = {
-      height: screen.height - 150 + "px",
-      // backgroundImage: 'url(' + require("@/assets/" + this.$vuetify.theme.global.name + "/wave-1.svg") + ')'
-    }
   },
   methods: {
     toggleTheme() {
