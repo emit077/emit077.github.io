@@ -1,5 +1,5 @@
 <template>
-  <v-app :theme="$store.state.currentTheme" class="bg-img" :class="'bg-img-'+$store.state.currentTheme">
+  <v-app :theme="$store.state.currentTheme" class="bg-img" :class="getClassName()">
     <app-bar/>
     <v-main class="main-body">
       <router-view/>
@@ -27,6 +27,10 @@
 .bg-img-light {
   background-image: url('@/assets/images/light/bg-Img.svg');
 }
+
+.bg-img-mobile {
+  background-image: url('@/assets/images/dark/bg-img-mobile.svg');
+}
 </style>
 
 <script>
@@ -44,6 +48,16 @@ export default {
     //
   }),
   mounted() {
+  },
+  methods: {
+    getClassName() {
+      if (this.$vuetify.display.mobile) {
+        return "bg-img-mobile"
+      } else {
+        return "bg-img-" + this.$store.state.currentTheme
+      }
+
+    }
   }
 }
 </script>
