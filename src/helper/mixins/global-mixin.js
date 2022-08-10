@@ -25,11 +25,29 @@ export default {
           title: "Contact Me",
           link: "lets-talk",
           link_page: "home",
-          // route_name: 'home',
+        },
+      ],
+      social_contact_list: [
+        {
+          icon: "mdi-github",
+          link: "https://github.com/emit077",
+        },
+        {
+          icon: "mdi-linkedin",
+          link: "https://www.linkedin.com/in/amit-kumar-sahu-705a06137",
+        },
+        {
+          icon: "mdi-stack-overflow",
+          link: "https://stackoverflow.com/users/10175889/amit",
+        },
+        {
+          icon: "mdi-codepen",
+          link: "https://codepen.io/emitsahu077",
         },
       ],
       menu_style: {},
       menu: false,
+
     }
   },
   methods: {

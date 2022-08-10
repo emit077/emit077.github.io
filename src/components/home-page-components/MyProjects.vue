@@ -1,5 +1,5 @@
 <template>
-  <div class="app-padding portfolio-section"
+  <div class="app-padding portfolio-section" id="portfolio"
        :style="style" :class="$vuetify.display.mobile?'pt-5':'text-h6'">
 
     <v-row align="top" justify="center" no-gutters class="py-15 my-15">
