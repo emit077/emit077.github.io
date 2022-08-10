@@ -17,12 +17,12 @@
                 <span class="text-dot" @click.prevent="onLinkClick(item.link)"> {{ item.title }} </span>
           </span>
         </div>
-        <div class="d-inline-block">
-          <theme-toggle-btn/>
-        </div>
+      </div>
+      <div class="d-inline-block px-8">
+        <theme-toggle-btn />
       </div>
       <!-- mobile -->
-      <div class="d-inline-flex">
+      <div class="d-inline-block" v-if="$vuetify.display.mobile">
         <menu-toggle-btn class="d-flex"/>
       </div>
     </div>

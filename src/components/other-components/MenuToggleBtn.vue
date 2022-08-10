@@ -1,7 +1,7 @@
 <template>
   <v-menu v-model="menu" transition="slide-y-transition">
     <template v-slot:activator="{ props }">
-      <span v-bind="props" class="mt-n2 menu-btn">
+      <span v-bind="props" class="menu-btn">
         <input type="checkbox" id="menu" v-model="menu">
         <label for="menu" class="icon" @click="toggleMenu"> <div class="menu"></div></label>
       </span>

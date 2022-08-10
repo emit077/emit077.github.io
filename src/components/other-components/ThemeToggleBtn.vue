@@ -1,7 +1,7 @@
 <template>
   <div>
     <input type="checkbox" id="theme-toggle" v-model="is_dark" @click="toggleTheme" hidden>
-    <label for="theme-toggle" class="mb-n1 ml-8 sun"></label>
+    <label for="theme-toggle" class="sun" :class="$vuetify.display.mobile?'mb-1':'mb-n1'"></label>
   </div>
 </template>
 <!--  -->
