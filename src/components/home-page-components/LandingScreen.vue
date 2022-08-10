@@ -2,9 +2,9 @@
 
   <div class="app-padding d-flex align-center" id="landing-screen"
        :style="style"
-       :class="$vuetify.display.mobile?'pt-5landing-screen-'+$store.state.currentTheme :'text-h6 landing-screen-'+$store.state.currentTheme">
+       :class="$vuetify.display.mobile?'py-15 landing-screen-'+$store.state.currentTheme :'text-h6 landing-screen-'+$store.state.currentTheme">
     <v-row align="center" justify="center" no-gutters>
-      <v-col sm="6" cols="12" class="justify-center" :class="$vuetify.display.mobile?'py-15 my-15':''">
+      <v-col sm="6" cols="12" class="justify-center" :class="$vuetify.display.mobile?'my-15':''">
         <p class="font-weight-bold  mb-5 text-stroke-1 ml-2"
            :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">Hey I'm</p>
         <h1 class=" font-weight-bold text-stroke-1"
