@@ -20,7 +20,7 @@
       <v-col md="6" cols="12" class="d-flex align-center">
         <v-row class="py-3 px-5" no-gutters>
           <v-col md="4" cols="6" class="text-center py-2 text-white" v-for="(item,i) in link_list" :key="i">
-            <span class="" @click.prevent="onLinkClick(item.link)">
+            <span class="cursor-pointer" @click.prevent="onLinkClick(item.link)">
             {{ item.title }}
             </span>
           </v-col>

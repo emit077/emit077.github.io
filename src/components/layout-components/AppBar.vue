@@ -56,7 +56,7 @@
 <!--  style  -->
 <style lang="scss" scoped>
 #app-bar {
-  //position: sticky;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -72,7 +72,7 @@
 .mobile-navigation-menu {
   margin-top: 12px;
   background-color: rgb(var(--v-theme-theme-fill-1), 0.8);
-  backdrop-filter: blur(10px);
+  //backdrop-filter: blur(10px);
 }
 
 .text-dot {
@@ -125,7 +125,8 @@ export default {
           APP_BAR.style.height = document.scrollingElement.scrollTop < 50 ? "60px" : "50px"
         else
           APP_BAR.style.height = document.scrollingElement.scrollTop < 50 ? "130px" : "70px"
-        APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop < screen.height ? "rgb(var(--v-theme-theme-fill-1), 1)" : "rgb(var(--v-theme-theme-fill-1), 0.8)"
+        APP_BAR.style.backdropFilter = document.scrollingElement.scrollTop > 50 ? "blur(10px)" : "none"
+        APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop > 50 ? "rgb(var(--v-theme-surface), 0.6)" : "none"
       }
     }.bind(this));
     setTimeout(() => {
