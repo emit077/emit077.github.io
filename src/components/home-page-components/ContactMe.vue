@@ -2,7 +2,7 @@
   <div class="app-padding py-15 my-15" id="lets-talk"
        :style="style" :class="$vuetify.display.mobile?'pt-5':'text-h6'">
     <p class="shadow-text">Let's Talk</p>
-    <v-row align="start" justify="center" no-gutters class="mt-n15">
+    <v-row align="start" justify="center" no-gutters :class="$vuetify.display.mobile?'mt-n2':'mt-n10'">
       <v-col sm="7" cols="12" class="justify-center ">
         <common-content-wrapper :title="title" :subtitle="subtitle" :description="description"/>
         <p class="mt-5">
@@ -50,7 +50,8 @@
             </v-form>
           </v-card-text>
         </div>
-        <circle-outline class="float-left move-animation-2 mt-n15" :stroke="'#F3B24A'" :stroke_width="5" style="width: 9px"
+        <circle-outline class="float-left move-animation-2 mt-n15" :stroke="'#F3B24A'" :stroke_width="5"
+                        style="width: 9px"
                         v-if="$vuetify.display.mobile"/>
       </v-col>
     </v-row>

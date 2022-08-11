@@ -9,7 +9,8 @@
              v-for="(service,i) in service_list" :key="i">
         <div class="service-card justify-center d-flex align-center">
           <div class="d-inline-flex">
-            <img :src="require('@/assets/images/'+service.img)" alt="">
+            <v-icon class="service-icon" size="50">{{ service.icon }}</v-icon>
+            <!--            <img :src="require('@/assets/images/'+service.img)" alt="">-->
           </div>
           <div class="d-inline-flex text-stroke-12 pl-5 text-h6">
             <div v-html="service.name"></div>
@@ -27,6 +28,11 @@
   min-height: 250px;
   border-radius: 5px;
   transition-duration: 1s;
+
+  .service-icon {
+    transition-duration: 1s;
+    color: rgb(var(--v-theme-stroke-3));
+  }
 }
 
 .service-card:hover {
@@ -34,7 +40,11 @@
   background-color: rgb(var(--v-theme-stroke-2));
 
   .un:after {
-    background: rgb(var(--v-theme-fill-2), 1) !important;
+    background: rgb(var(--v-theme-fill-3), 1) !important;
+  }
+
+  .service-icon {
+    color: rgb(var(--v-theme-stroke-1));
   }
 }
 
@@ -59,20 +69,24 @@ export default {
           "Professionally connected with the web development industry and information technology for many years. Interested in the entire frontend spectrum and working on ambitious projects with positive people.",
       service_list: [
         {
-          name: "Product<p class=\"un\">Designer</p>",
-          img: 'services/pen.svg'
+          name: "Web<p class=\"un\">Development</p>",
+          img: 'services/pen.svg',
+          icon: 'mdi-web'
         },
         {
-          name: "Product<p class=\"un\">Designer</p>",
-          img: 'services/pen.svg'
+          name: "Backend<p class=\"un\">Development</p>",
+          img: 'services/pen.svg',
+          icon: 'mdi-application-cog'
         },
         {
-          name: "Product<p class=\"un\">Designer</p>",
-          img: 'services/pen.svg'
+          name: "UI/UX<p class=\"un\">Designing</p>",
+          img: 'services/pen.svg',
+          icon: 'mdi-fountain-pen-tip'
         },
         {
-          name: "Product<p class=\"un\">Designer</p>",
-          img: 'services/pen.svg'
+          name: "Product Design<p class=\"un\">& Development</p>",
+          img: 'services/pen.svg',
+          icon: 'mdi-monitor-cellphone'
         }
       ]
     }
