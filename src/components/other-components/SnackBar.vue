@@ -1,6 +1,6 @@
 <template>
   <v-snackbar v-model="getSnackbar.flag" :color="getSnackbar.color" :timeout="timeout"
-              position="" location="top right">
+              location="top right">
     <b class="text--white">
       {{ getSnackbar.text }}
     </b>

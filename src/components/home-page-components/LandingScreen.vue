@@ -58,8 +58,8 @@ export default {
         "min-height": screen.height - 200 + "px",
       },
       title: "Introduction",
-      subtitle: "Product designer and Developer, Based in Raipur",
-      description: "Passionate about visual design and technology. I specialized in frontend development and UI/UX design and my passion is about building elegant and professional user interfaces and websites."
+      subtitle: "Fullstack Developer & UI/UX Designer, Based in Raipur",
+      description: "Passionate about visual design and technology. I specialized in fullstack development and UI/UX design and my passion is about building elegant and professional user interfaces and websites."
     }
   },
   mounted() {

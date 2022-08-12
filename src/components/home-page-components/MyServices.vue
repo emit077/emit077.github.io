@@ -66,7 +66,7 @@ export default {
       title: "Services",
       subtitle: "How can i Help you?",
       description: "\n" +
-          "Professionally connected with the web development industry and information technology for many years. Interested in the entire development spectrum and working on ambitious projects with positive people.",
+          "Professionally connected with the IT industry for many years. Interested in the entire web development spectrum and working on ambitious projects with positive people.",
       service_list: [
         {
           name: "Web<p class=\"un\">Development</p>",
