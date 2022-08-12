@@ -44,7 +44,7 @@
                 </textarea>
               </div>
               <div class="text-center mt-5">
-                <v-btn color="stroke-2" width="150" height="40" class="send-btn" type="submit">
+                <v-btn color="stroke-2" width="150" height="40" class="send-btn" type="submit" :loading="btn_loading">
                   <span class="text-white font-weight-bold text-subtitle-1">Send</span>
                 </v-btn>
               </div>
@@ -126,6 +126,7 @@ export default {
       email: "",
       message: "",
       valid: false,
+      btn_loading: false,
     }
   },
   methods: {
@@ -133,6 +134,7 @@ export default {
       let is_error = this.validateForm()
       if (is_error)
         return false
+      this.btn_loading = true
       let params = {
         name: this.name,
         mobile: this.mobile,
@@ -148,7 +150,10 @@ export default {
         this.showSnakeBar('success', "your response has been recorded. I'll get back to you as soon as possible")
       }.bind(this)).catch(function (error) {
         this.showSnakeBar('error', "Something went wrong, Please try again letter.")
-      }.bind(this))
+      }.bind(this)).finally()
+      {
+        this.btn_loading = false
+      }
     },
     validateForm() {
       let error_count = 0
