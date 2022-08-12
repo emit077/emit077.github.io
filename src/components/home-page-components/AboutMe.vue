@@ -26,7 +26,7 @@ export default {
     return {
       title: "About me",
       subtitle: "Know more about me",
-      description: "Hello! My name is Amit Kumar Sahu. I'm software developer based in of Chhattisgarh India. I enjoy creating things that live on the internet. My interest in fullstack development started back in 2018 when I decided to try editing custom themes and buid the website for collage event, Fast-forward to today, and I’ve had the privilege of working at an a start-up and a huge corporation. <br/> <br/>Professionally connected with the web development industry and information technology for many years. Interested in the entire frontend spectrum and working on ambitious projects with positive people."
+      description: "Hello! My name is Amit Kumar Sahu. I'm a software developer based in Raipur Chhattisgarh. I enjoy creating things that live on the internet. It all started from my college days when I start building interest in software development and decided to try editing custom themes and build a website for a college event, Fast-forward to today, I had the privilege of working at a start-up and a huge corporation. <br/> <br/>Professionally connected with the web development industry and information technology for many years. Interested in the entire frontend spectrum and working on ambitious projects with positive people."
     }
   },
   methods: {}

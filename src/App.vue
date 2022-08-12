@@ -5,6 +5,7 @@
       <router-view/>
     </v-main>
     <app-footer/>
+    <snack-bar/>
   </v-app>
 </template>
 <style lang="scss">
@@ -40,12 +41,14 @@
 <script>
 import AppBar from "@/components/layout-components/AppBar"
 import AppFooter from "@/components/layout-components/AppFooter"
+import SnackBar from "@/components/other-components/SnackBar"
 
 export default {
   name: 'App',
   components: {
     AppBar,
     AppFooter,
+    SnackBar
   },
 
   data: () => ({

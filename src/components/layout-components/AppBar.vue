@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="d-inline-block px-8">
-        <theme-toggle-btn />
+        <theme-toggle-btn/>
       </div>
       <!-- mobile -->
       <div class="d-inline-block" v-if="$vuetify.display.mobile">
@@ -81,9 +81,6 @@ export default {
   data() {
     return {
       header: false,
-      bar_height: 0,
-      menu_style: {},
-      menu: false,
     }
   },
   mounted() {

@@ -1,17 +1,18 @@
 <template>
-  <v-menu v-model="menu" transition="slide-y-transition">
+  <v-menu v-model="menu" transition="slide-y-transition" class="">
     <template v-slot:activator="{ props }">
       <span v-bind="props" class="menu-btn">
         <input type="checkbox" id="menu" v-model="menu">
         <label for="menu" class="icon" @click="toggleMenu"> <div class="menu"></div></label>
       </span>
     </template>
-    <div class="text-center py-4 mobile-navigation-menu " :style="menu_style">
+    <div class="text-center pt-4 pb-6 mobile-navigation-menu " :style="menu_style">
       <div v-for="(item,i) in nav_link_list" :key="i" class="align-center">
-            <span class="my-2 d-inline-block" v-if="item.link && $route.name==item.link_page">
-              <a href="#" @click.prevent="onLinkClick(item.link)" class="text-center text-stroke-1 text-decoration-none">
+            <span class="my-2 d-inline-block ml-n6" v-if="item.link && $route.name==item.link_page">
+              <a href="#" @click.prevent="onLinkClick(item.link)"
+                 class="text-center text-stroke-1 text-decoration-none">
                 <center>
-                  <span class=""> {{ item.title }}</span>
+                  <span class="font-weight-bold text-h6"> {{ item.title }}</span>
                 </center>
               </a>
             </span>
@@ -60,24 +61,12 @@ label.icon {
 }
 
 
-
 .menu-btn:hover {
   .menu,
   .menu::before,
   .menu::after {
     background: rgb(var(--v-theme-stroke-3));
   }
-}
-
-//.icon:hover .menu,
-//.icon:hover .menu::before,
-//.icon:hover .menu::after {
-//  background: rgb(var(--v-theme-stroke-3));
-//}
-
-.icon .menu {
-  //left: 18px;
-  //top: 27px;
 }
 
 .icon .menu::before {
@@ -123,13 +112,12 @@ export default {
   mounted() {
     this.menu_style = {
       width: screen.width + "px !important",
-      height: screen.height + "px !important",
+      // height: screen.height + "px !important",
     }
   },
   methods: {
     toggleMenu() {
       this.menu = !this.menu
-      // this.$store.dispatch('setCurrentTheme', this.$store.state.currentTheme == 'dark' ? 'light' : 'dark')
     }
   }
 };

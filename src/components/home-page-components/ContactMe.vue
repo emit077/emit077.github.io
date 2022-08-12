@@ -22,24 +22,25 @@
 
               <div class="form-input">
                 <label for="name" class="text-stroke-1">Name</label><br>
-                <input type="text" id="name" name="name" v-model="name" maxlength="80"><br>
+                <input type="text" id="name" name="name" v-model="name" maxlength="80"
+                       @input="validateInput(name,'name')"><br>
               </div>
 
               <div class="form-input">
                 <label for="mobile" class="text-stroke-1">Mobile</label><br>
                 <input type="text" id="mobile" name="mobile" v-model="mobile" maxlength="10"
-                       :class="validateMobile(mobile)"
-                       @keydown="restrictChar($event)"><br>
+                       @input="validateMobile(mobile)"
+                       @keydown="restrictChar($event);"><br>
               </div>
               <div class="form-input">
                 <label for="email" class="text-stroke-1">Email</label><br>
                 <input type="text" id="email" name="email" v-model="email"
-                       :class="validateEmail(email)" maxlength="120"><br>
+                       @input="validateEmail(email)" maxlength="120"><br>
               </div>
               <div class="form-input">
                 <label for="message" class="text-stroke-1">Message</label><br>
                 <textarea type="text" id="message" name="message" v-model="message"
-                          style="height: 80px">
+                          style="height: 80px" @input="validateInput(message,'message')">
                 </textarea>
               </div>
               <div class="text-center mt-5">
@@ -105,6 +106,7 @@
 import CommonContentWrapper from "@/components/other-components/CommonContentWrapper"
 import ZigZagLine from "@/components/other-components/shapes/ZigZagLine"
 import CircleOutline from "@/components/other-components/shapes/CircleOutline"
+import {createUser} from "@/firebase-config";
 
 export default {
   name: 'ContactMe',
@@ -129,43 +131,72 @@ export default {
   methods: {
     submitForm() {
       let is_error = this.validateForm()
-      console.log("is_error==", is_error)
+      if (is_error)
+        return false
+      let params = {
+        name: this.name,
+        mobile: this.mobile,
+        email: this.email,
+        message: this.message,
+        date_time: new Date(),
+      }
+      createUser(params).then(function (response) {
+        this.name = ""
+        this.mobile = ""
+        this.email = ""
+        this.message = ""
+        this.showSnakeBar('success', "your response has been recorded. I'll get back to you as soon as possible")
+      }.bind(this)).catch(function (error) {
+        this.showSnakeBar('error', "Something went wrong, Please try again letter.")
+      }.bind(this))
     },
     validateForm() {
-      let is_error = false
-
-      is_error = this.validateInput(this.name, true) == 'error' ? true : false
-      if (is_error)
-        if (!is_error)
-          is_error = this.validateMobile(this.mobile, true) == 'error' ? true : false
-      if (!is_error)
-        is_error = this.validateEmail(this.email, true) == 'error' ? true : false
-      if (!is_error)
-        is_error = this.validateInput(this.message, true) == 'error' ? true : false
-
-      return is_error
+      let error_count = 0
+      this.validateInput(this.name, 'name', true) ? error_count++ : ''
+      this.validateMobile(this.mobile, true) ? error_count++ : ''
+      this.validateEmail(this.email, true) ? error_count++ : ''
+      this.validateInput(this.message, 'message', true) ? error_count++ : ''
+      return error_count > 0 ? true : false
     },
     validateEmail(email, empty_check = false) {
-      if (empty_check && !email)
-        return "error"
-      if (email && !(/.+@.+\..+/.test(email)))
-        return "error"
-      else
-        return ""
+      if (empty_check && !email) {
+        this.appendClass("email", true)
+        return true
+      } else if (email && !(/.+@.+\..+/.test(email))) {
+        this.appendClass("email", true)
+        return true
+      } else {
+        this.appendClass("email", false)
+        return false
+      }
     },
     validateMobile(mobile, empty_check = false) {
-      if (empty_check && !mobile)
-        return "error"
-      if (mobile && !(/^[6-9][0-9]{9}$/.test(mobile)))
-        return "error"
-      else
-        return ""
+      if (empty_check && !mobile) {
+        this.appendClass("mobile", true)
+        return true
+      } else if (mobile && !(/^[6-9][0-9]{9}$/.test(mobile))) {
+        this.appendClass("mobile", true)
+        return true
+      } else {
+        this.appendClass("mobile", false)
+        return false
+      }
     },
-    validateInput(input, empty_check = false) {
-      if (empty_check && !input)
-        return "error"
+    validateInput(input, id, empty_check = false) {
+      if (empty_check && !input) {
+        this.appendClass(id, true)
+        return true
+      } else {
+        this.appendClass(id, false)
+        return false
+      }
+    },
+    appendClass(id, error = true) {
+      let element = document.getElementById(id);
+      if (error)
+        element.classList.add("error");
       else
-        return ""
+        element.classList.remove("error");
     },
     restrictChar(event) {
       let digitPeriodRegExp = new RegExp('\\d|\\.');

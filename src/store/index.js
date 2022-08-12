@@ -2,7 +2,12 @@ import {createStore} from 'vuex'
 
 export default createStore({
   state: {
-    currentTheme: 'dark'
+    currentTheme: 'dark',
+    snackbar: {
+      text: "",
+      color: '',
+      flag: false,
+    }
   },
   getters: {
     getCurrentTheme: state => {

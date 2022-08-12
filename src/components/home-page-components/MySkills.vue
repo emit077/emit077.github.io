@@ -115,7 +115,7 @@ export default {
         },
         {
           title: "firebase",
-          img: require("@/assets/images/tech-stack/digitalocean.svg")
+          img: require("@/assets/images/tech-stack/firebase.svg")
         },
       ]
     }
