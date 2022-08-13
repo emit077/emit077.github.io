@@ -14,7 +14,7 @@
       </v-col>
       <!--      -->
       <v-col sm="6" cols="12" class="justify-center"
-             v-for="(project,i) in project_list.splice(1,7)" :key="i"
+             v-for="(project,i) in $vuetify.display.mobile?project_list: project_list.splice(1,7)" :key="i"
              :class="getClassName(i)">
         <project-card :project="project"/>
       </v-col>
@@ -55,20 +55,20 @@ export default {
           tech_stack: ["Django", "python", "Vuejs", "Vuetify", "HTML", "SCSS"],
         },
         {
-          title: "Medx",
-          description:
-              "A Subscription Based B2B medicine delivery service. Delivering 2500+ order in a Day. Currently operated in Raipur Only. this platefoarm have some key feature Like Shipment Lifecycle, Live Traking, Wallet and Payout etc. ",
-          image: require("@/assets/images/projects/medx.png"),
-          working_link: "https://themedx.in",
-          tech_stack: ["Django", "python", "Vuejs", "Vuetify", "HTML", "CSS"],
-        },
-        {
           title: "Tutors Factory",
           description:
               "Tutors Factory the best home tutor provider have connected the 10,000+ tutors with almost 25,000+ students across the nation. It has Student portal, Tutor portal, Bussiness Developer portal And Admin portal",
           image: require("@/assets/images/projects/tf.png"),
           working_link: "https://www.tutorsfactory.com",
           tech_stack: ["Django", "python", "Vuejs", "Vuetify", "HTML", "SCSS"],
+        },
+        {
+          title: "Medx",
+          description:
+              "A Subscription Based B2B medicine delivery service. Delivering 2500+ order in a Day. Currently operated in Raipur Only. this platefoarm have some key feature Like Shipment Lifecycle, Live Traking, Wallet and Payout etc. ",
+          image: require("@/assets/images/projects/medx.png"),
+          working_link: "https://themedx.in",
+          tech_stack: ["Django", "python", "Vuejs", "Vuetify", "HTML", "CSS"],
         },
         {
           title: "Wednicely",
