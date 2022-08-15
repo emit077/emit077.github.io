@@ -13,7 +13,7 @@
 <!--             class="profile-img">-->
 <!--        <img v-else :src="require('@/assets/images/light/profile-img.png')" alt="" class="profile-img">-->
 
-        <a :href="pdfLink" download="download" class="float-right">
+        <a :href="pdfLink" download="download" class="float-right" target="_blank">
           <button class="get-cv-btn mt-7">
             Download CV
           </button>
@@ -55,7 +55,7 @@ export default {
   },
   data() {
     return {
-     publicPath: process.env.BASE_URL,
+     pdfLink: "https://drive.google.com/uc?export=download&id=1rVf57FzhpCKUz8uxVAz79yjoYOKIDgIi",
       title: "About me",
       subtitle: "Know more about me",
       description: "Hello! My name is Amit Kumar Sahu. I'm a software developer & UI/UX Designer based in Raipur Chhattisgarh. I enjoy creating things that live on the internet. It all started from my college days when I start building interest in software development and decided to try editing custom themes and build a website for a college event, Fast-forward to today, I had the privilege of working at a start-up and a huge corporation. " +
