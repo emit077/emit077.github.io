@@ -98,6 +98,8 @@
 
   .error {
     border: 2px solid rgba(209, 0, 0, 0.5) !important;
+    position: relative;
+    animation: shake 0.3s ease-in-out;
   }
 }
 </style>
