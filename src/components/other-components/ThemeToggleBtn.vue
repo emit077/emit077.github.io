@@ -40,10 +40,15 @@ export default {
     }
   },
   mounted() {
+    this.$store.dispatch('setCurrentTheme', localStorage.getItem('currentTheme') || 'dark')
+    if (localStorage.getItem('currentTheme') == 'light')
+      this.is_dark = false
   },
   methods: {
     toggleTheme() {
-      this.$store.dispatch('setCurrentTheme', this.$store.state.currentTheme == 'dark' ? 'light' : 'dark')
+      let currentTheme = this.$store.state.currentTheme == 'dark' ? 'light' : 'dark'
+      this.$store.dispatch('setCurrentTheme', currentTheme)
+      localStorage.setItem('currentTheme', currentTheme)
     }
   }
 };
