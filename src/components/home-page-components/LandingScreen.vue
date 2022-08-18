@@ -7,8 +7,10 @@
       <v-col sm="6" cols="12" class="justify-center" :class="$vuetify.display.mobile?'my-15':''">
         <p class="font-weight-bold  mb-5 text-stroke-1 ml-2"
            :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">Hey I'm</p>
-        <h1 class=" font-weight-bold text-stroke-1"
-            :class="$vuetify.display.mobile?'text-h2 ':' text-h1'">Amit<br>Kumar</h1>
+<!--        <h1 class=" font-weight-bold text-stroke-1"-->
+<!--            :class="$vuetify.display.mobile?'text-h2 ':' text-h1'">Amit<br>Kumar</h1>-->
+
+        <AnimatedText></AnimatedText>
         <zig-zag-line class="move-animation-2" :stroke="'#F3B24A'" :height="$vuetify.display.mobile?8:13"/>
       </v-col>
       <v-col sm="6" cols="12" class="justify-center text-stroke-1">
@@ -43,6 +45,7 @@ import CommonContentWrapper from "@/components/other-components/CommonContentWra
 import CircleOutline from "@/components/other-components/shapes/CircleOutline"
 import ZigZagLine from "@/components/other-components/shapes/ZigZagLine"
 import TriangleOutline from "@/components/other-components/shapes/TriangleOutline"
+import AnimatedText from "@/components/other-components/AnimatedText"
 
 export default {
   name: 'LandingPageVue',
@@ -50,7 +53,8 @@ export default {
     CommonContentWrapper,
     CircleOutline,
     ZigZagLine,
-    TriangleOutline
+    TriangleOutline,
+    AnimatedText
   },
   data() {
     return {

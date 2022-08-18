@@ -1,5 +1,6 @@
 <template>
   <div>
+<!--    <AnimatedText/>-->
     <landing-screen/>
     <my-experience/>
     <my-services/>
@@ -20,6 +21,7 @@ import MyExperience from "@/components/home-page-components/MyExperience"
 import MyProjects from "@/components/home-page-components/MyProjects"
 import MyServices from "@/components/home-page-components/MyServices"
 import MySkills from "@/components/home-page-components/MySkills"
+// import AnimatedText from "@/components/other-components/AnimatedText"
 
 export default {
   name: 'HomePage',
@@ -31,6 +33,7 @@ export default {
     MyServices,
     MyProjects,
     MySkills,
+    // AnimatedText
   },
   data() {
     return {}
