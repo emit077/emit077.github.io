@@ -5,8 +5,10 @@
        :class="$vuetify.display.mobile?'py-15 landing-screen-'+$store.state.currentTheme :'text-h6 landing-screen-'+$store.state.currentTheme">
     <v-row align="center" justify="center" no-gutters>
       <v-col sm="6" cols="12" class="justify-center" :class="$vuetify.display.mobile?'my-15':''">
+        <span class="ml-2 wave"
+           :class="$vuetify.display.mobile?'text-h5 ':' text-h4'">👋</span>
         <p class="font-weight-bold  mb-5 text-stroke-1 ml-2"
-           :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">Hey I'm</p>
+           :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">Hey I'm </p>
 <!--        <h1 class=" font-weight-bold text-stroke-1"-->
 <!--            :class="$vuetify.display.mobile?'text-h2 ':' text-h1'">Amit<br>Kumar</h1>-->
 

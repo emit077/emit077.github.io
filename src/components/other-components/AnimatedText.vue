@@ -11,7 +11,7 @@
 </template>
 <style lang="scss" scoped>
 $stroke-width: 1px;
-$stroke-color: rgba(var(--v-theme-stroke-2));
+$stroke-color: rgba(var(--v-theme-stroke-1));
 
 svg text {
   animation: stroke 6s alternate;
