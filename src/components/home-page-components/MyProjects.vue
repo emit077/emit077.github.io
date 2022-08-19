@@ -1,6 +1,7 @@
 <template>
   <div class="app-padding portfolio-section" id="portfolio"
        :style="style" :class="$vuetify.display.mobile?'pt-5':'text-h6'">
+  <zig-zag-line class="float-right " :stroke="'#07bf13'" :height="$vuetify.display.mobile?7:10"/>
 
     <v-row align="top" justify="center" no-gutters class="py-15 my-15">
       <v-col sm="6" cols="12" class="justify-center" :class="getClassName(0)"
@@ -32,12 +33,14 @@
 <script>
 import CommonContentWrapper from "@/components/other-components/CommonContentWrapper"
 import ProjectCard from "@/components/other-components/ProjectCard"
+import ZigZagLine from "@/components/other-components/shapes/ZigZagLine"
 
 export default {
   name: 'MyProjects',
   components: {
     CommonContentWrapper,
     ProjectCard,
+    ZigZagLine
   },
   data() {
     return {
