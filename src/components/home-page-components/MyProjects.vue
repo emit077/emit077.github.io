@@ -1,9 +1,9 @@
 <template>
   <div class="app-padding portfolio-section" id="portfolio"
        :style="style" :class="$vuetify.display.mobile?'pt-5':'text-h6'">
-  <zig-zag-line class="float-right " :stroke="'#07bf13'" :height="$vuetify.display.mobile?7:10"/>
+    <zig-zag-line class="float-right " :stroke="'#07bf13'" :height="$vuetify.display.mobile?7:10"/>
 
-    <v-row align="top" justify="center" no-gutters class="py-15 my-15">
+    <v-row align="top" justify="center" no-gutters :class="$vuetify.display.mobile?'py-15 mt-15':'py-15 my-15'">
       <v-col sm="6" cols="12" class="justify-center" :class="getClassName(0)"
              v-if="!$vuetify.display.mobile">
         <project-card :project="project_list[0]"/>
@@ -21,6 +21,7 @@
       </v-col>
     </v-row>
   </div>
+  <arrow-outline style="width:18px" class="ml-4"/>
 </template>
 <!--  -->
 <style lang="scss" scoped>
@@ -34,13 +35,15 @@
 import CommonContentWrapper from "@/components/other-components/CommonContentWrapper"
 import ProjectCard from "@/components/other-components/ProjectCard"
 import ZigZagLine from "@/components/other-components/shapes/ZigZagLine"
+import ArrowOutline from "@/components/other-components/shapes/ArrowOutline"
 
 export default {
   name: 'MyProjects',
   components: {
     CommonContentWrapper,
     ProjectCard,
-    ZigZagLine
+    ZigZagLine,
+    ArrowOutline
   },
   data() {
     return {
