@@ -25,7 +25,7 @@
 <!--  -->
 <style lang="scss" scoped>
 .profile-img {
-  width: 100%;
+  width: 90%;
 }
 
 .get-cv-btn {

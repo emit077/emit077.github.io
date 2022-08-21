@@ -8,7 +8,7 @@
 <!--  -->
 <style lang="scss" scoped>
 .move-top {
-  animation: move-top 10s ease-in-out infinite;
+  animation: move-top 15s ease-in-out infinite;
   transform-origin: center;
   position: relative;
 }

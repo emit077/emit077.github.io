@@ -52,7 +52,6 @@ export default {
   },
 
   data: () => ({
-    //
   }),
   mounted() {
   },
@@ -64,7 +63,7 @@ export default {
         return "bg-img-" + this.$store.state.currentTheme
       }
 
-    }
+    },
   }
 }
 </script>
