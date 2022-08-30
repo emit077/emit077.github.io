@@ -17,7 +17,8 @@
 }
 
 #theme-toggle:not(:checked) + label {
-  background-color: gold;
+  background-color: #ffbe26;
+  //background-color: gold;
 }
 
 #theme-toggle:checked + label {
