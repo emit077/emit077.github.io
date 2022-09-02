@@ -51,12 +51,15 @@ p {
   z-index: 1;
   font-weight: bolder;
   font-size: 11rem;
-  line-height: 60%;
+  line-height: 100%;
   text-align: center;
-  //-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  //-webkit-text-stroke-width: 2px;
-  //-webkit-text-stroke-color: rgb(var(--v-theme-stroke-2), 0.2);
-  color: rgb(var(--v-theme-stroke-1), 0.04) !important;
+  background: transparent;
+  opacity: 0.25;
+  background: linear-gradient(to top, rgb(var(--v-theme-surface), 1) 0%, rgb(var(--v-theme-stroke-1), 1) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  //color: rgb(var(--v-theme-stroke-1), 0.04) !important;
 }
 
 @media screen and (max-width: 1260px) {
@@ -174,20 +177,38 @@ p {
 }
 
 .wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0.0deg)
+  }
+  10% {
+    transform: rotate(14.0deg)
+  }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8.0deg)
+  }
+  30% {
+    transform: rotate(14.0deg)
+  }
+  40% {
+    transform: rotate(-4.0deg)
+  }
+  50% {
+    transform: rotate(10.0deg)
+  }
+  60% {
+    transform: rotate(0.0deg)
+  }
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0.0deg)
+  }
 }
