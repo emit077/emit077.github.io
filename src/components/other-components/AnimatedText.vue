@@ -1,10 +1,10 @@
 <template>
   <div class="d-block">
-    <svg viewBox="0 0 400 150">
-      <text x="0%" y="40%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">
+    <svg viewBox="0 0 340 150">
+      <text x="0%" y="35%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">
         Amit
       </text>
-      <text x="0%" y="85%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">Kumar
+      <text x="0%" y="82%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">Kumar
       </text>
     </svg>
   </div>
