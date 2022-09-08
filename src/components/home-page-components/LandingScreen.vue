@@ -31,6 +31,7 @@
 <style lang="scss" scoped>
 #landing-screen {
   transition: backgroundImage 0.5s linear;
+  animation: bg 0.1s linear;
 }
 
 .landing-screen-desktop {
@@ -100,6 +101,15 @@
   }
   100% {
     transform: translate3d(0, var(--dots-gap), 0);
+  }
+}
+
+@keyframes bg {
+  from {
+    background-size: 0;
+  }
+  to {
+    background-size: 50%;
   }
 }
 
