@@ -22,6 +22,11 @@ export default {
           link: "about-me",
           link_page: "home",
         }, {
+          title: "Portfolio",
+          link: "portfolio",
+          link_page: "home",
+        },
+        {
           title: "Contact Me",
           link: "lets-talk",
           link_page: "home",

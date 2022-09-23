@@ -1,19 +1,15 @@
 <template>
-  <div class="d-block">
+  <div class="d-block" :class="$store.state.currentTheme=='dark'?'text-animation':'text-animation'">
     <svg viewBox="0 0 340 150">
-      <text x="0%" y="35%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">
-        Amit
-      </text>
-      <text x="0%" y="82%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">Kumar
-      </text>
+      <text x="0%" y="35%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">Amit</text>
+      <text x="-1%" y="82%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">Kumar</text>
     </svg>
   </div>
 </template>
 <style lang="scss" scoped>
 $stroke-width: 1px;
 $stroke-color: rgba(var(--v-theme-stroke-1));
-
-svg text {
+.text-animation text{
   animation: stroke 6s alternate;
   transition: color 6s linear;
   //stroke-width: $stroke-width;

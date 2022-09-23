@@ -17,9 +17,10 @@
         </div>
       </v-col>
       <!--   quick link   -->
-      <v-col md="6" cols="12" class="d-flex align-center">
+      <v-col md="6" cols="12" class="d-flex align-center ">
         <v-row class="py-3 px-5" no-gutters>
-          <v-col md="4" cols="6" class="text-center py-2 text-white" v-for="(item,i) in link_list" :key="i">
+          <v-col md="4" cols="6" class=" py-2 text-white" v-for="(item,i) in link_list" :key="i"
+                 :class="$vuetify.display.mobile?'text-center':'text-left'">
             <span class="cursor-pointer hover-underline" @click.prevent="onLinkClick(item.link)">
             {{ item.title }}
             </span>
@@ -55,7 +56,6 @@
   a {
     text-decoration: none;
   }
-
 
 
   .hover-underline:hover {

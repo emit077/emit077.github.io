@@ -15,6 +15,15 @@
 
         <AnimatedText></AnimatedText>
         <zig-zag-line class="move-animation-2" :stroke="'#F3B24A'" :height="$vuetify.display.mobile?8:13"/>
+        <!-- get my cv-->
+        <a :href="pdfLink" download="download" class="d-block" target="_blank">
+          <button class="get-cv-btn mt-7" size="small">
+            <v-icon>mdi-download</v-icon>
+            Download My CV
+          </button>
+        </a>
+        <!--        -->
+
       </v-col>
       <v-col sm="6" cols="12" class="justify-center text-stroke-1">
         <circle-outline class="float-right move-animation" :stroke="'#F85C5C'" style="width: 15px"/>
@@ -113,6 +122,20 @@
   }
 }
 
+.get-cv-btn {
+  padding: 3px 15px;
+  border-radius: 8px;
+  border: solid 1.5px rgb(var(--v-theme-stroke-2), 0.8);
+  color: rgb(var(--v-theme-stroke-2), 0.8);
+  background-color: rgb(var(--v-theme-stroke-2), 0.1);
+  transition: background-color 0.5s linear, color 0.5s linear;
+  font-size: 16px;
+}
+
+.get-cv-btn:hover {
+  color: rgb(var(--v-theme-stroke-1), 0.8);
+  background-color: rgb(var(--v-theme-stroke-2), 1);
+}
 
 </style>
 <!--   -->
@@ -135,6 +158,7 @@ export default {
   },
   data() {
     return {
+      pdfLink: "https://drive.google.com/uc?export=download&id=1Xz3gtHxK215NEFWHvKn1ho3lpfbXnu37",
       style: {
         "min-height": screen.height - 200 + "px",
       },
