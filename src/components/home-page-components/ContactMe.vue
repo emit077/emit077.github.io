@@ -1,8 +1,8 @@
 <template>
   <div class="app-padding py-15 my-15" id="lets-talk"
        :style="style" :class="$vuetify.display.mobile?'pt-5':'text-h6'">
-    <p class="shadow-text">Let's Talk</p>
-    <v-row align="start" justify="center" no-gutters :class="$vuetify.display.mobile?'mt-n2':'mt-n10'">
+    <p class="shadow-text" no-gutters :class="$vuetify.display.mobile?'mb-n6':'mb-n15'">Let's Talk</p>
+    <v-row align="center" justify="center">
       <v-col sm="7" cols="12" class="justify-center ">
         <common-content-wrapper :title="title" :subtitle="subtitle" :description="description"/>
         <p class="mt-5">
