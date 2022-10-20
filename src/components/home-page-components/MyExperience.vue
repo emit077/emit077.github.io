@@ -54,13 +54,12 @@ export default {
   },
   methods: {
     calcExperience() {
-      var start_date = new Date("6/1/2019");
-      var current_date = new Date();
-      var diffDays = parseInt((current_date - start_date) / (1000 * 60 * 60 * 24), 10);
+      let start_date = new Date("6/1/2019");
+      let current_date = new Date();
+      let diffDays = parseInt((current_date - start_date) / (1000 * 60 * 60 * 24), 10);
       let diffYears = parseInt(diffDays / 365)
       let diffMonths = parseInt((diffDays % 365) / 30)
       this.experience = diffYears + "." + diffMonths
-      console.log(diffDays, diffYears, diffMonths)
     }
   }
 };
