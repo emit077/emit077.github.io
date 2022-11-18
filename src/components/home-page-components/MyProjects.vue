@@ -50,55 +50,55 @@ export default {
       style: {},
       title: "Portfolio",
       subtitle: "Some Things I’ve Built",
-      description: "I build some greate products. some of my recent and note worthy project are listed here.",
+      description: "I build some great products. some of my recent and note worthy project are listed here.",
       project_list: [
         {
           title: "Cashpo",
           description:
-              "A plateform which provides you Personal loans upto ₹2 lakhs instantly through a completely paperless process. Currently operated in 10+ cities Of India. Key Highlight Emandate/Nach, e-KYC, Auto Disbursment etc.",
+              "A platform which provides you Personal loans upto ₹2 lakhs instantly through a completely paperless process. Key Highlight e-Mandate/NACH, e-KYC, Auto Disbursement etc.",
           image: require("@/assets/images/projects/cashpo.png"),
           working_link: "https://cashpo.in",
-          tech_stack: ["Django", "python", "Vuejs", "Vuetify", "HTML", "SCSS"],
+          tech_stack: ["django", "python", "vue-js",  "html-5", "sass","postgresql"],
         },
         {
           title: "Tutors Factory",
           description:
-              "Tutors Factory the best home tutor provider have connected the 10,000+ tutors with almost 25,000+ students across the nation. It has Student portal, Tutor portal, Bussiness Developer portal And Admin portal",
+              "Tutors Factory the best home tutor provider have connected the 10,000+ tutors with almost 25,000+ students across the nation. It has Student portal, Tutor portal, Business Developer portal And Admin portal",
           image: require("@/assets/images/projects/tf.png"),
           working_link: "https://www.tutorsfactory.com",
-          tech_stack: ["Django", "python", "Vuejs", "Vuetify", "HTML", "SCSS"],
+           tech_stack: ["django", "python", "vue-js",  "html-5", "sass","postgresql"],
         },
         {
           title: "Medx",
           description:
-              "A Subscription Based B2B medicine delivery service. Delivering 2500+ order in a Day. Currently operated in Raipur Only. this platefoarm have some key feature Like Shipment Lifecycle, Live Traking, Wallet and Payout etc. ",
+              "A Subscription Based B2B medicine delivery service. Delivering 2500+ order in a Day. This platform have some key feature Like Shipment Lifecycle, Live tracking, Wallet and Payout etc.",
           image: require("@/assets/images/projects/medx.png"),
           working_link: "https://themedx.in",
-          tech_stack: ["Django", "python", "Vuejs", "Vuetify", "HTML", "CSS"],
+          tech_stack: ["django", "python", "vue-js",  "html-5"  ,"postgresql"],
         },
         {
           title: "Wednicely",
           description:
-              "Wednicely Panda is plateform where you can create a e-invitation card within few minutes. It has 1000+ temaplate and  10+ category  to choose from ",
+              "Wednicely is platform where you can create a e-invitation card within few minutes. It has 1000+ template and  10+ category  to choose from",
           image: require("@/assets/images/projects/ip.png"),
           working_link: "https://wednicely.com/",
-          tech_stack: ["Vuejs", "Vuetify", "HTML", "CSS"],
+          tech_stack: ["django", "python", "vue-js",  "html-5","postgresql"],
         },
         {
           title: "BurnBlack",
           description:
-              "BurnBlack is plateform who provide the  finacial service like ITR, GST filling, Company registration, Billing Software and other Financial Services.",
+              "BurnBlack is platform who provide the financial service like ITR, GST filling, Company registration, Billing Software and other Financial Services.",
           image: require("@/assets/images/projects/burnblack.png"),
           working_link: "https://burnblack.in/",
-          tech_stack: ["Django", "python", "Vuejs", "Vuetify", "HTML", "SCSS"],
+           tech_stack: ["django", "python", "vue-js",  "html-5","postgresql"],
         },
         {
           title: "Rawfit",
           description:
-              "Rawfit is subscription Based helth monitoring system based on google fit. Which also provide service to book a activity sesson.",
+              "Rawfit is subscription Based health monitoring system based on google fit. Which also provide service to book a activity session.",
           image: require("@/assets/images/projects/rawfit.png"),
           working_link: "https://rawfit.in",
-          tech_stack: ["Django", "python", "Vuejs", "HTML", "SCSS"],
+           tech_stack: ["django", "python", "vue-js",  "html-5","postgresql"],
         },
         {
           description:
@@ -106,7 +106,7 @@ export default {
           title: "GimBooks",
           image: require("@/assets/images/projects/gim.png"),
           working_link: "https://www.gimbooks.com/",
-          tech_stack: ["Django", "python", "JavaScript", "HTML", "CSS"],
+          tech_stack: ["django", "python", "html-5","javascript","mysql"],
         },
       ],
     }

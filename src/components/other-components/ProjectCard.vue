@@ -1,7 +1,7 @@
 <template>
   <v-hover v-slot="{ isHovering, props }">
     <v-card
-        class="mx-auto project-card"
+        class="mx-auto project-card "
         color="grey-lighten-4"
         v-bind="props"
     >
@@ -19,11 +19,21 @@
           >
             <div>
               <p class="text-h6 text-stroke-2 font-weight-bold p-title un mb-3"> {{ project.title }} </p>
-              <small class="text-stroke-12 font-weight-regular ">{{ project.description }}</small>
-              <a :href="project.working_link" target="_blank" class="text-decoration-none">
-                <img :src="require('@/assets/images/dark/external-link.svg')" alt="external-link"
-                     class="external-link mr-4 mb-4 ">
-              </a>
+              <small class="text-stroke-12 font-weight-regular">{{ project.description }}</small>
+
+              <v-row class="external-link w-100 mx-0 px-3 pb-1">
+                <v-col cols="8">
+                  <div class="tech-uses">
+                    <img v-for="(tech,i) in project.tech_stack" :key="i" class="mr-2"
+                         :src="require('@/assets/images/tech-stack/'+tech+'.svg')" alt="external-link" :title="tech" width="25">
+                  </div>
+                </v-col>
+                <v-col cols="4" class="text-right">
+                  <a :href="project.working_link" target="_blank" class="text-decoration-none">
+                    <img :src="require('@/assets/images/dark/external-link.svg')" alt="external-link">
+                  </a>
+                </v-col>
+              </v-row>
             </div>
           </div>
         </v-expand-transition>
@@ -76,6 +86,7 @@ $transition_duration: 1s;
     bottom: 0;
     right: 0;
   }
+
 }
 
 .project-card:hover {
@@ -84,7 +95,7 @@ $transition_duration: 1s;
   }
 
   .project-content {
-    background-color: rgb(var(--v-theme-stroke-2), 0.95) !important;
+    //background-color: rgb(var(--v-theme-stroke-2), 0.95) !important;
   }
 
   .project-img {
@@ -96,10 +107,9 @@ $transition_duration: 1s;
   }
 
   .p-title:after {
-    background: rgb(var(--v-theme-fill-2), 1);
+     background: rgb(var(--v-theme-stroke-2), 1);
   }
 }
-
 
 </style>
 <!--   -->
