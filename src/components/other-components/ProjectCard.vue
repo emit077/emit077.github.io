@@ -23,10 +23,10 @@
 
               <v-row class="external-link w-100 mx-0 px-3 pb-1">
                 <v-col cols="8">
-                  <div class="tech-uses">
-                    <img v-for="(tech,i) in project.tech_stack" :key="i" class="mr-2"
-                         :src="require('@/assets/images/tech-stack/'+tech+'.svg')" alt="external-link" :title="tech" width="25">
-                  </div>
+<!--                  <div class="tech-uses">-->
+<!--                    <img v-for="(tech,i) in project.tech_stack" :key="i" class="mr-2"-->
+<!--                         :src="require('@/assets/images/tech-stack/'+tech+'.svg')" alt="external-link" :title="tech" width="25">-->
+<!--                  </div>-->
                 </v-col>
                 <v-col cols="4" class="text-right">
                   <a :href="project.working_link" target="_blank" class="text-decoration-none">

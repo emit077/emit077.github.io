@@ -120,7 +120,7 @@ export default {
     getClassName(i) {
       let class_name = ""
       if (this.$vuetify.display.mobile) {
-        class_name += "py-6 px-2"
+        class_name += "py-6 px-0"
       } else {
         if (i % 2 == 0)
           class_name += " pr-6 py-6"
