@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     calcExperience() {
-      let start_date = new Date("6/1/2019");
+      let start_date = new Date("06/01/2019");
       let current_date = new Date();
       let diffDays = parseInt((current_date - start_date) / (1000 * 60 * 60 * 24), 10);
       let diffYears = parseInt(diffDays / 365)

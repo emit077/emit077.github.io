@@ -28,7 +28,6 @@
 .portfolio-section {
   background-position: top right;
 }
-
 </style>
 <!--   -->
 <script>
@@ -58,7 +57,7 @@ export default {
               "A platform which provides you Personal loans upto ₹2 lakhs instantly through a completely paperless process. Key Highlight e-Mandate/NACH, e-KYC, Auto Disbursement etc.",
           image: require("@/assets/images/projects/cashpo.png"),
           working_link: "https://cashpo.in",
-          tech_stack: ["django", "python", "vue-js",  "html-5", "sass","postgresql"],
+          tech_stack: ["django", "python", "vue-js", "html-5", "sass", "postgresql"],
         },
         {
           title: "Tutors Factory",
@@ -66,7 +65,7 @@ export default {
               "Tutors Factory the best home tutor provider have connected the 10,000+ tutors with almost 25,000+ students across the nation. It has Student portal, Tutor portal, Business Developer portal And Admin portal",
           image: require("@/assets/images/projects/tf.png"),
           working_link: "https://www.tutorsfactory.com",
-           tech_stack: ["django", "python", "vue-js",  "html-5", "sass","postgresql"],
+          tech_stack: ["django", "python", "vue-js", "html-5", "sass", "postgresql"],
         },
         {
           title: "Medx",
@@ -74,7 +73,7 @@ export default {
               "A Subscription Based B2B medicine delivery service. Delivering 2500+ order in a Day. This platform have some key feature Like Shipment Lifecycle, Live tracking, Wallet and Payout etc.",
           image: require("@/assets/images/projects/medx.png"),
           working_link: "https://themedx.in",
-          tech_stack: ["django", "python", "vue-js",  "html-5"  ,"postgresql"],
+          tech_stack: ["django", "python", "vue-js", "html-5", "postgresql"],
         },
         {
           title: "Wednicely",
@@ -82,7 +81,7 @@ export default {
               "Wednicely is platform where you can create a e-invitation card within few minutes. It has 1000+ template and  10+ category  to choose from",
           image: require("@/assets/images/projects/ip.png"),
           working_link: "https://wednicely.com/",
-          tech_stack: ["django", "python", "vue-js",  "html-5","postgresql"],
+          tech_stack: ["django", "python", "vue-js", "html-5", "postgresql"],
         },
         {
           title: "BurnBlack",
@@ -90,7 +89,7 @@ export default {
               "BurnBlack is platform who provide the financial service like ITR, GST filling, Company registration, Billing Software and other Financial Services.",
           image: require("@/assets/images/projects/burnblack.png"),
           working_link: "https://burnblack.in/",
-           tech_stack: ["django", "python", "vue-js",  "html-5","postgresql"],
+          tech_stack: ["django", "python", "vue-js", "html-5", "postgresql"],
         },
         {
           title: "Rawfit",
@@ -98,7 +97,7 @@ export default {
               "Rawfit is subscription Based health monitoring system based on google fit. Which also provide service to book a activity session.",
           image: require("@/assets/images/projects/rawfit.png"),
           working_link: "https://rawfit.in",
-           tech_stack: ["django", "python", "vue-js",  "html-5","postgresql"],
+          tech_stack: ["django", "python", "vue-js", "html-5", "postgresql"],
         },
         {
           description:
@@ -106,7 +105,14 @@ export default {
           title: "GimBooks",
           image: require("@/assets/images/projects/gim.png"),
           working_link: "https://www.gimbooks.com/",
-          tech_stack: ["django", "python", "html-5","javascript","mysql"],
+          tech_stack: ["django", "python", "html-5", "javascript", "mysql"],
+        },
+        {
+          description: "",
+          title: "More Projects",
+          image: require("@/assets/images/projects/more-project.png"),
+          working_link: "https://github.com/emit077?tab=repositories",
+          tech_stack: ["django", "python", "html-5", "javascript", "mysql"],
         },
       ],
     }
@@ -118,11 +124,14 @@ export default {
   },
   methods: {
     getClassName(i) {
+      console.log(i)
       let class_name = ""
       if (this.$vuetify.display.mobile) {
         class_name += "py-6 px-0"
       } else {
-        if (i % 2 == 0)
+        if (i == 6)
+          class_name += " px-0 py-6"
+        else if (i % 2 == 0)
           class_name += " pr-6 py-6"
         else
           class_name += " pl-6 py-6"

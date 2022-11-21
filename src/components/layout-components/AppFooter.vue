@@ -70,26 +70,6 @@ export default {
   name: "AppFooter",
   data: () => ({
     footer: false,
-    contact_number: "+91 8878957797",
-    contact_email: "hello.spidertech@gmail.com",
-    contact_list: [
-      {
-        icon: "mdi-facebook",
-        link: "https://www.facebook.com/Spidertechin-109532415172906",
-      },
-      // {
-      //   icon: "mdi-linkedin",
-      //   link: "https://www.linkedin.com/in/amit-kumar-sahu-705a06137",
-      // },
-      {
-        icon: "mdi-instagram",
-        link: "https://www.instagram.com/spidertech.in/?igshid=YmMyMTA2M2Y%3D",
-      },
-      {
-        icon: "mdi-twitter",
-        link: "https://twitter.com/SpiderTech777",
-      },
-    ],
     link_list: [
       {
         title: "Home",

@@ -1,57 +1,44 @@
 <template>
-  <v-hover v-slot="{ isHovering, props }">
-    <v-card
-        class="mx-auto project-card "
-        color="grey-lighten-4"
-        v-bind="props"
+  <v-card
+      class="mx-auto project-card "
+      color="grey-lighten-4"
+      v-bind="props"
+  >
+    <v-img
+        :aspect-ratio="16/8"
+        cover
+        :src="project.image"
+        class="project-img"
+        :min-height="$vuetify.display.mobile?225:''"
     >
-      <v-img
-          :aspect-ratio="16/9"
-          cover
-          :src="project.image"
-          class="project-img"
-          :min-height="$vuetify.display.mobile?225:''"
-      >
-        <v-expand-transition>
-          <div
-              :class="isHovering?'v-card--reveal':'v-card--shrink'"
-              class="project-content d-flex pa-6"
-          >
-            <div>
-              <p class="text-h6 text-stroke-2 font-weight-bold p-title un mb-3"> {{ project.title }} </p>
-              <small class="text-stroke-12 font-weight-regular">{{ project.description }}</small>
+      <div class="project-content d-flex pa-6 h-100">
+        <div>
+          <p class="text-h6 text-stroke-2 font-weight-bold p-title un mb-3"> {{ project.title }} </p>
+          <small class="text-stroke-12 font-weight-regular">{{ project.description }}</small>
 
-              <v-row class="external-link w-100 mx-0 px-3 pb-1">
-                <v-col cols="8">
-<!--                  <div class="tech-uses">-->
-<!--                    <img v-for="(tech,i) in project.tech_stack" :key="i" class="mr-2"-->
-<!--                         :src="require('@/assets/images/tech-stack/'+tech+'.svg')" alt="external-link" :title="tech" width="25">-->
-<!--                  </div>-->
-                </v-col>
-                <v-col cols="4" class="text-right">
-                  <a :href="project.working_link" target="_blank" class="text-decoration-none">
-                    <img :src="require('@/assets/images/dark/external-link.svg')" alt="external-link">
-                  </a>
-                </v-col>
-              </v-row>
-            </div>
-          </div>
-        </v-expand-transition>
-      </v-img>
-    </v-card>
-  </v-hover>
+          <v-row class="external-link w-100 mx-0 px-3 pb-1">
+            <v-col cols="8">
+              <!--                  <div class="tech-uses">-->
+              <!--                    <img v-for="(tech,i) in project.tech_stack" :key="i" class="mr-2"-->
+              <!--                         :src="require('@/assets/images/tech-stack/'+tech+'.svg')" alt="external-link" :title="tech" width="25">-->
+              <!--                  </div>-->
+            </v-col>
+            <v-col cols="4" class="text-right">
+              <a :href="project.working_link" target="_blank" class="text-decoration-none">
+                <img :src="require('@/assets/images/dark/external-link.svg')" alt="external-link">
+              </a>
+            </v-col>
+          </v-row>
+        </div>
+      </div>
+    </v-img>
+  </v-card>
 </template>
 <!--  -->
 <style lang="scss" scoped>
 $transition_duration: 1s;
 .project-card {
-  .v-card--shrink {
-    height: 100%;
-  }
-
-  .v-card--reveal {
-    height: 100%;
-  }
+  border-radius: 5px;
 
   .project-content {
     align-items: center;
@@ -68,7 +55,7 @@ $transition_duration: 1s;
   .project-content,
   .project-img {
     transition-duration: $transition_duration;
-    transform-origin: bottom;
+    transform-origin: top;
   }
 
   .p-title:after {
@@ -107,7 +94,7 @@ $transition_duration: 1s;
   }
 
   .p-title:after {
-     background: rgb(var(--v-theme-stroke-2), 1);
+    background: rgb(var(--v-theme-stroke-2), 1);
   }
 }
 
