@@ -1,11 +1,11 @@
 <template>
-  <v-footer app absolute class="footer-wrapper d-block bg-dark"
-            v-if="footer">
-    <v-row justify="center" class="py-10" no-gutters>
+  <v-footer app absolute class="d-block bg-dark app-padding" v-if="footer">
+    <div class="footer-wrapper  ">
+      <v-row justify="center" align="center" class="py-10" no-gutters>
       <v-col md="3" cols="12" class="text-center py-5">
         <div class="px-5">
           <router-link to="/" class="router-link">
-            <img :src="require('@/assets/images/dark/logo.svg')" alt="logo" class="app-logo">
+            <img :src="require('@/assets/images/dark/octa-logo.svg')" alt="logo" class="app-logo">
           </router-link>
           <!--  social link   -->
           <v-divider class="my-4 mx-10" color="rgb(var(--v-theme-stroke-3), 0.3)"></v-divider>
@@ -17,30 +17,27 @@
         </div>
       </v-col>
       <!--   quick link   -->
-      <v-col md="6" cols="12" class="d-flex align-center ">
-        <v-row class="py-3 px-5" no-gutters>
-          <v-col md="4" cols="6" class=" py-2 text-white" v-for="(item,i) in link_list" :key="i"
+      <v-col md="6" cols="12">
+          <li class=" py-1 text-white" v-for="(item,i) in link_list" :key="i"
                  :class="$vuetify.display.mobile?'text-center':'text-left'">
             <span class="cursor-pointer hover-underline" @click.prevent="onLinkClick(item.link)">
             {{ item.title }}
             </span>
-          </v-col>
-        </v-row>
+          </li>
       </v-col>
     </v-row>
-
     <v-divider></v-divider>
     <p class="text-caption text-center mt-3"> Designed & developed by @Amit Kumar Sahu</p>
-
-
+  </div>
   </v-footer>
 </template>
 <style lang="scss" scoped>
 .footer-wrapper {
-  background-color: #161B22;
+  // background-color: #161B22;
+  background-color: #151821;
 
   .app-logo {
-    width: 35%;
+    width: 75%;
   }
 
   .social-icon {

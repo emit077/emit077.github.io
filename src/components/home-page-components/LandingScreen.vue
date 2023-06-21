@@ -158,7 +158,7 @@ export default {
   },
   data() {
     return {
-      pdfLink: "https://drive.google.com/uc?export=download&id=1Xz3gtHxK215NEFWHvKn1ho3lpfbXnu37",
+      pdfLink: "https://drive.google.com/uc?export=download&id=1d83s9s9vHDMwmMIh5kUN7NQq-Nm6RqWr",
       style: {
         "min-height": screen.height - 200 + "px",
       },
