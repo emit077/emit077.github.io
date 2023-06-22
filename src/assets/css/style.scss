@@ -1,24 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Poppins:ital,wght@0,400;0,600;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Russo+One');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Poppins:ital,wght@0,400;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 .v-application {
-  [class*='text-'] {
+  [class*="text-"] {
     color: #36405a;
-    font-family: 'Poppins', sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
   }
 
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .fs-nunito {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .fs-poppins {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
+}
+.fs-roboto-mono {
+  font-family: "Roboto Mono", monospace;
 }
 
-body, html {
+body,
+html {
   scroll-behavior: smooth;
 }
 
@@ -36,7 +40,7 @@ p {
 }
 
 .un:after {
-  content: '';
+  content: "";
   width: 20px;
   height: 2px;
   margin-top: 3px;
@@ -55,7 +59,11 @@ p {
   text-align: center;
   background: transparent;
   opacity: 0.25;
-  background: linear-gradient(to top, rgb(var(--v-theme-surface), 1) 0%, rgb(var(--v-theme-stroke-1), 1) 70%);
+  background: linear-gradient(
+    to top,
+    rgb(var(--v-theme-surface), 1) 0%,
+    rgb(var(--v-theme-stroke-1), 1) 70%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -103,7 +111,6 @@ p {
   animation: spin-360 5s ease-in-out infinite;
 }
 
-
 @keyframes move {
   0% {
     left: 0px;
@@ -117,7 +124,8 @@ p {
 }
 
 @keyframes move4 {
-  100%, 0% {
+  100%,
+  0% {
     left: 40px;
   }
   50% {
@@ -131,19 +139,23 @@ p {
     left: -60px;
     top: 20px;
   }
-  90%, 10% {
+  90%,
+  10% {
     left: 40px;
     top: -30px;
   }
-  80%, 20% {
+  80%,
+  20% {
     left: -20px;
     top: -60px;
   }
-  70%, 30% {
+  70%,
+  30% {
     left: 40px;
     top: -90px;
   }
-  60%, 40% {
+  60%,
+  40% {
     left: -20px;
     top: -120px;
   }
@@ -165,13 +177,13 @@ p {
   }
 }
 
-
 @keyframes shake {
   50%,
   100% {
     left: -1.5px;
   }
-  25%, 75% {
+  25%,
+  75% {
     left: 1.5px;
   }
 }
@@ -186,29 +198,29 @@ p {
 
 @keyframes wave-animation {
   0% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
   10% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
   /* The following five values can be played with to make the waving more or less extreme */
   20% {
-    transform: rotate(-8.0deg)
+    transform: rotate(-8deg);
   }
   30% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
   40% {
-    transform: rotate(-4.0deg)
+    transform: rotate(-4deg);
   }
   50% {
-    transform: rotate(10.0deg)
+    transform: rotate(10deg);
   }
   60% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
   /* Reset for the last half to pause */
   100% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
 }

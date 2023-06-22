@@ -6,7 +6,7 @@
     <v-row align="top" justify="center" no-gutters :class="$vuetify.display.mobile?'py-15 mt-15':'py-15 my-15'">
       <v-col sm="6" cols="12" class="justify-center" :class="getClassName(0)"
              v-if="!$vuetify.display.mobile">
-        <project-card :project="project_list[0]"/>
+        <project-card :project="project_list[0]" :index="0"/>
       </v-col>
       <!--      -->
       <v-col sm="6" cols="12" class="text-stroke-1"
@@ -17,7 +17,7 @@
       <v-col sm="6" cols="12" class="justify-center"
              v-for="(project,i) in $vuetify.display.mobile?project_list: project_list.splice(1,7)" :key="i"
              :class="getClassName(i)">
-        <project-card :project="project"/>
+        <project-card :project="project" :index="i+1"/>
       </v-col>
     </v-row>
   </div>
@@ -107,13 +107,13 @@ export default {
           working_link: "https://www.gimbooks.com/",
           tech_stack: ["django", "python", "html-5", "javascript", "mysql"],
         },
-        {
-          description: "",
-          title: "More Projects",
-          image: require("@/assets/images/projects/more-project.png"),
-          working_link: "https://github.com/emit077?tab=repositories",
-          tech_stack: ["django", "python", "html-5", "javascript", "mysql"],
-        },
+        // {
+        //   description: "",
+        //   title: "More Projects",
+        //   image: require("@/assets/images/projects/more-project.png"),
+        //   working_link: "https://github.com/emit077?tab=repositories",
+        //   tech_stack: ["django", "python", "html-5", "javascript", "mysql"],
+        // },
       ],
     }
   },

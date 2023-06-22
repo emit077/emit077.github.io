@@ -127,7 +127,7 @@
   border-radius: 8px;
   border: solid 1.5px rgb(var(--v-theme-stroke-2), 0.8);
   color: rgb(var(--v-theme-stroke-2), 0.8);
-  background-color: rgb(var(--v-theme-stroke-2), 0.1);
+  // background-color: rgb(var(--v-theme-stroke-2), 0.1);
   transition: background-color 0.5s linear, color 0.5s linear;
   font-size: 16px;
 }

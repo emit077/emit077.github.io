@@ -24,7 +24,7 @@ export default createVuetify({
           info: "#2196F3",
           success: "#4CAF50",
           warning: "#FB8C00",
-
+          
           "fill-1": "#434656",
           "fill-2": "#434656",
           "fill-3": "#0DCCC2",
@@ -32,6 +32,9 @@ export default createVuetify({
           "stroke-12": "#FFFFFF",
           "stroke-2": "#F85C5C",
           "stroke-3": "#F3B24A",
+          "stroke-4": "#1C222B",
+
+
         },
       },
       dark: {
@@ -52,6 +55,9 @@ export default createVuetify({
           "stroke-12": "#FFFFFF",
           "stroke-2": "#F85C5C",
           "stroke-3": "#F3B24A",
+          "stroke-4": "#F5F5F5",
+
+
         },
       },
     },
