@@ -1,6 +1,26 @@
 <template>
-  <h4 v-html="title" class="fs-nunito section-title" :class="'section-title-'+this.$store.state.currentTheme"></h4>
-  <h2 class="my-10 text-stroke-1 section-subtitle" v-html="subtitle"></h2>
+  <h4 class="fs-nunito section-title splitting " :class="'section-title-' + this.$store.state.currentTheme" data-splitting>
+    <span
+      v-for="(text, i) in title.split('')"
+      :key="i"
+      class=""
+      :style="{ '--char-index': i }"
+      >
+        {{ text }}
+      </span></h4>
+  <h2 class="my-10 text-stroke-1 section-subtitle splitting  text--blocks" data-splitting>
+    
+    <div  v-for="(subtitletext, i) in subtitle.split('<br/>')" :key="i">
+      <span
+      v-for="(text, i) in subtitletext.split('')"
+      :key="i"
+      class="char"
+      :style="{ '--char-index': i }"
+      >
+        {{ text }}
+      </span>
+    </div>
+  </h2>
   <p v-html="description" class="text-stroke-1 section-description"></p>
 </template>
 <!--  -->
@@ -38,22 +58,27 @@
 </style>
 <!--   -->
 <script>
+import ScrollOut from "scroll-out";
+
 export default {
-  name: 'CommonContentWrapper',
-  props: ['title', 'subtitle', "description"],
+  name: "CommonContentWrapper",
+  props: ["title", "subtitle", "description"],
   data() {
     return {
-      style: {
-        height: screen.height - 150 + "px",
-      }
-    }
+      // style: {
+      //   height: screen.height - 150 + "px",
+      // },
+    };
   },
   mounted() {
-    this.style = {
-      height: screen.height - 150 + "px",
-      // backgroundImage: 'url(' + require("@/assets/" + this.$vuetify.theme.global.name + "/wave-1.svg") + ')'
-    }
+    ScrollOut({
+      targets: "[data-splitting]",
+    });
+    // this.style = {
+    //   height: screen.height - 150 + "px",
+    //   // backgroundImage: 'url(' + require("@/assets/" + this.$vuetify.theme.global.name + "/wave-1.svg") + ')'
+    // };
   },
-  methods: {}
+  methods: {},
 };
 </script>

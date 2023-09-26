@@ -2,26 +2,45 @@
   <div class="app-padding py-15 my-15" :style="style">
     <v-row align="end" justify="center" no-gutters>
       <v-col sm="6" cols="12" class="justify-center text-stroke-1">
-        <qube-outline class="spin-animation float-right" :opacity="0.4" :stroke="'#F85C5C'" style="width: 15px"/>
-        <common-content-wrapper :title="title" :subtitle="subtitle" :description="description"/>
+        <qube-outline
+          class="spin-animation float-right"
+          :opacity="0.4"
+          :stroke="'#F85C5C'"
+          style="width: 15px"
+        />
+        <common-content-wrapper
+          :title="title"
+          :subtitle="subtitle"
+          :description="description"
+        />
       </v-col>
-      <v-col xs="6" sm="3" md="2" class="justify-center"
-             v-for="(skill,i) in tech_stacks" :key="i"
-             :class="$vuetify.display.mobile?'text-center ':' text-left'">
-        <div class="skills-card align-center text-center pa-4  ma-4">
+      <v-col
+        xs="6"
+        sm="3"
+        md="2"
+        class="justify-center"
+        v-for="(skill, i) in tech_stacks"
+        :key="i"
+        :class="$vuetify.display.mobile ? 'text-center ' : ' text-left'"
+      >
+        <div class="skills-card align-center text-center pa-4 ma-4">
           <div class="mt-4">
-            <img :src="skill.img" :alt="skill.title" width="40">
+            <img :src="skill.img" :alt="skill.title" width="40" />
             <p v-html="skill.title"></p>
           </div>
         </div>
       </v-col>
     </v-row>
-    <circle-outline class="move-animation-2 float-left" :opacity="0.8" :stroke="'#1F7949'" style="width: 15px"/>
+    <circle-outline
+      class="move-animation-2 float-left"
+      :opacity="0.8"
+      :stroke="'#1F7949'"
+      style="width: 15px"
+    />
   </div>
 </template>
 <!--  -->
 <style lang="scss" scoped>
-
 .skills-card {
   background-color: rgb(var(--v-theme-fill-2), 0.4);
   border-radius: 5px;
@@ -47,79 +66,79 @@
 </style>
 <!--   -->
 <script>
-import CommonContentWrapper from "@/components/other-components/CommonContentWrapper"
-import QubeOutline from "@/components/other-components/shapes/QubeOutline"
-import CircleOutline from "@/components/other-components/shapes/CircleOutline"
+import CommonContentWrapper from "@/components/other-components/CommonContentWrapper";
+import QubeOutline from "@/components/other-components/shapes/QubeOutline";
+import CircleOutline from "@/components/other-components/shapes/CircleOutline";
 
 export default {
-  name: 'MySkills',
+  name: "MySkills",
   components: {
     CommonContentWrapper,
     QubeOutline,
-    CircleOutline
+    CircleOutline,
   },
   data() {
     return {
       title: "Tech Stack",
-      subtitle: "Power of technology in <br/>my hands",
+      subtitle: "Power of technology in my hands",
       description: "",
       tech_stacks: [
         {
           title: "Python",
-          img: require("@/assets/images/tech-stack/python.svg")
+          img: require("@/assets/images/tech-stack/python.svg"),
         },
         {
           title: "Django",
-          img: require("@/assets/images/tech-stack/django.svg")
+          img: require("@/assets/images/tech-stack/django.svg"),
         },
         {
           title: "Vue js",
-          img: require("@/assets/images/tech-stack/vue-js.svg")
+          img: require("@/assets/images/tech-stack/vue-js.svg"),
         },
         {
           title: "Vuetify",
           width: 45,
-          img: require("@/assets/images/tech-stack/vuetify.svg")
+          img: require("@/assets/images/tech-stack/vuetify.svg"),
         },
         {
           title: "Javascript",
-          img: require("@/assets/images/tech-stack/javascript.svg")
+          img: require("@/assets/images/tech-stack/javascript.svg"),
         },
         {
           title: "Git",
-          img: require("@/assets/images/tech-stack/git.svg")
+          img: require("@/assets/images/tech-stack/git.svg"),
         },
         {
           title: "Jquery",
-          img: require("@/assets/images/tech-stack/jquery.svg")
+          img: require("@/assets/images/tech-stack/jquery.svg"),
         },
         {
           title: "HTML5",
-          img: require("@/assets/images/tech-stack/html-5.svg")
+          img: require("@/assets/images/tech-stack/html-5.svg"),
         },
         {
           title: "SASS",
-          img: require("@/assets/images/tech-stack/sass.svg")
+          img: require("@/assets/images/tech-stack/sass.svg"),
         },
         {
           title: "Mysql",
-          img: require("@/assets/images/tech-stack/mysql.svg")
+          img: require("@/assets/images/tech-stack/mysql.svg"),
         },
         {
           title: "Postgresql",
-          img: require("@/assets/images/tech-stack/postgresql.svg")
+          img: require("@/assets/images/tech-stack/postgresql.svg"),
         },
         {
           title: "AWS",
-          img: require("@/assets/images/tech-stack/amazon-web-services.svg")
+          img: require("@/assets/images/tech-stack/amazon-web-services.svg"),
         },
         {
           title: "firebase",
-          img: require("@/assets/images/tech-stack/firebase.svg")
+          img: require("@/assets/images/tech-stack/firebase.svg"),
         },
-      ]
-    }
+      ],
+    };
   },
-  methods: {}
+  methods: {},
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="app-padding align-center d-block py-15 my-15" id="experience"
        :class="$vuetify.display.mobile?'pt-5':'text-h6'">
-    <p class="shadow-text text-center">Experience</p>
+    <p class="shadow-text text-center" v-bind="shado_text_animation">Experience</p>
     <div class="d-flex justify-space-around" v-if="!$vuetify.display.mobile">
       <div class="d-inline-flex">
         <div class="d-inline-flex  font-weight-bold text-stroke-2"

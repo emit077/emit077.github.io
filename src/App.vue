@@ -10,6 +10,7 @@
 </template>
 <style lang="scss">
 @import "./assets/css/style.scss";
+@import "./assets/css/animation.scss";
 
 .main-body {
   overflow-x: hidden !important;
