@@ -107,6 +107,14 @@ export default {
           working_link: "https://www.gimbooks.com/",
           tech_stack: ["django", "python", "html-5", "javascript", "mysql"],
         },
+        {
+          description:
+              "Digital ayurveda is patients management platform for docters where they can manage all the medical records and drugs record.",
+          title: "Digital Ayurved",
+          image: require("@/assets/images/projects/digital-ayurved.png"),
+          working_link: "https://digitalayurved.in/",
+          tech_stack: ["django", "python", "html-5",'vue','vuetify', "javascript", "mysql"],
+        },
         // {
         //   description: "",
         //   title: "More Projects",

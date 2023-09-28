@@ -8,7 +8,6 @@ import { loadFonts } from "./plugins/webfontloader";
 import rules from "@/helper/rules";
 import globalMixin from "@/helper/mixins/global-mixin";
 
-
 // animation
 import AOS from "aos";
 import "aos/dist/aos.css";

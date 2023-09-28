@@ -11,9 +11,10 @@
           <p class="text-h5 text-stroke-4 font-weight-bold p-title un mb-3">
             {{ project.title }}
           </p>
+
           <small class="fs-roboto-mono project-index"
             >{{ index > 9 ? index : "0" + index }}
-            <v-icon size="14" class="right-arrow">mdi-arrow-right</v-icon>
+            <v-icon size="18" class="right-arrow">mdi-arrow-right</v-icon>
           </small>
         </div>
       </div>
@@ -70,19 +71,26 @@ $transition_duration: 1s;
   }
 
   .project-img-cover-mobile {
-    background: radial-gradient(63.80% 66.20% at 46.81% 50.00%, rgba(var(--v-theme-surface), 0.74) 0%, rgba(217, 217, 217, 0.00) 100%);
+    background: radial-gradient(
+      63.8% 66.2% at 46.81% 50%,
+      rgba(var(--v-theme-surface), 0.74) 0%,
+      rgba(217, 217, 217, 0) 100%
+    );
     // background: linear-gradient(79deg, #1C222B 0%, rgba(217, 217, 217, 0.00) 100%);
     transition-duration: 10s;
     transform-origin: 0%;
   }
-  .p-title:after {
-    content: "";
-    width: 115%;
-    height: 2px;
-    margin-top: 10px;
-    display: block;
-    background: rgb(var(--v-theme-stroke-4), 1);
-    transition: all 0.3s ease-in-out;
+  .p-title {
+    transition: all 0.3s 0.3s ease-in-out;
+    &:after {
+      content: "";
+      width: 105%;
+      height: 2px;
+      margin-top: 10px;
+      display: block;
+      background: rgb(var(--v-theme-stroke-4), 1);
+      transition: all 0.3s 0.3s ease-in-out;
+    }
   }
 }
 .right-arrow {
@@ -97,6 +105,10 @@ $transition_duration: 1s;
     left: 10px;
     color: rgb(var(--v-theme-stroke-3), 1);
     // transform: scale(1.1);
+  }
+  .p-title {
+    transition: all 0.3s 0.3s ease-in-out;
+    letter-spacing: 0.15em !important;
   }
 }
 </style>

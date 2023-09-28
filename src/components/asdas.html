@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/animation.scss">
+    <title>Document</title>
+  </head>
+  <body>
+    <h4
+      class="shift-right splitting"
+      data-splitting=""
+      style="--word-total: 3; --char-total: 21"
+    >
+      <span class="char" data-char="H" style="--char-index: 0; --char-total: 10"
+        >H</span
+      ><span
+        class="char"
+        data-char="o"
+        style="--char-index: 1; --char-total: 10"
+        >o</span
+      ><span
+        class="char"
+        data-char="r"
+        style="--char-index: 2; --char-total: 10"
+        >r</span
+      ><span
+        class="char"
+        data-char="i"
+        style="--char-index: 3; --char-total: 10"
+        >i</span
+      ><span
+        class="char"
+        data-char="z"
+        style="--char-index: 4; --char-total: 10"
+        >z</span
+      ><span
+        class="char"
+        data-char="o"
+        style="--char-index: 5; --char-total: 10"
+        >o</span
+      ><span
+        class="char"
+        data-char="n"
+        style="--char-index: 6; --char-total: 10"
+        >n</span
+      ><span
+        class="char"
+        data-char="t"
+        style="--char-index: 7; --char-total: 10"
+        >t</span
+      ><span
+        class="char"
+        data-char="a"
+        style="--char-index: 8; --char-total: 10"
+        >a</span
+      ><span
+        class="char"
+        data-char="t"
+        style="--char-index: 7; --char-total: 10"
+        >t</span
+      ><span
+        class="char"
+        data-char="a"
+        style="--char-index: 8; --char-total: 10"
+        >a</span
+      ><span
+        class="char"
+        data-char="l"
+        style="--char-index: 9; --char-total: 10"
+        >l</span
+      >
+    </h4>
+
+
+
+
+    <h1 class="shift-right words chars splitting" data-splitting="" style="--word-total: 2; --char-total: 11;"><span class="word" data-word="Shift" style="--word-index: 0;"><span class="char" data-char="S" style="--char-index: 0;">S</span><span class="char" data-char="h" style="--char-index: 1;">h</span><span class="char" data-char="i" style="--char-index: 2;">i</span><span class="char" data-char="f" style="--char-index: 3;">f</span><span class="char" data-char="t" style="--char-index: 4;">t</span></span><span class="whitespace"> </span><span class="word" data-word="Effect" style="--word-index: 1;"><span class="char" data-char="E" style="--char-index: 5;">E</span><span class="char" data-char="f" style="--char-index: 6;">f</span><span class="char" data-char="f" style="--char-index: 7;">f</span><span class="char" data-char="e" style="--char-index: 8;">e</span><span class="char" data-char="c" style="--char-index: 9;">c</span><span class="char" data-char="t" style="--char-index: 10;">t</span></span></h1>
+  </body>
+</html>
+
+<style lang="scss">
+  html {
+    background: #00043c;
+    color: #fff;
+  }
+
+.shift-right {
+
+&:before { 
+  content: '>';
+  font: inherit;
+  vertical-align: 0.1em;
+  display: inline-block;
+  transform: scaleY(0) translateX(-1em);
+  margin-right: -0.25em;
+}
+
+&:before,
+.char {
+  transition: transform 0.8s cubic-bezier(.75,0,.24,.98);
+  transition-delay: calc( 0.015s * var(--char-index) );
+}
+
+.char {
+    display: inline-block;
+  transform: translateX(-0.15em);
+}
+
+&:hover:before {
+  transform: scaleY(1) translateX(0em); 
+}
+
+&:hover .char {
+  transform: translateX(1em);
+  transform: translateX(0.5em) translateX( calc(0.1em * var(--char-index)) );
+}
+
+}
+
+
+  /* .slide-horizontal {
+    text-align: center;
+  }
+
+  .splitting .char {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+  }
+  .slide-horizontal:hover .char::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 20%;
+    animation: block calc(0.1s * (var(--char-total)))
+      calc(0.1s * (var(--char-index))) 1 both;
+  }
+  @keyframes block {
+    0% {
+      transform: translate(-110%, 110%);
+    }
+    45%,
+    55% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(110%, 0%);
+    }
+  } */
+</style>

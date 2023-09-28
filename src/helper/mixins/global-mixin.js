@@ -57,7 +57,8 @@ export default {
         "data-aos": "fade-up",
         "data-aos-delay": "10",
         "data-aos-duration": "1100",
-        "data-aos-anchor-placement":"bottom-bottom"
+        "data-aos-anchor-placement":"bottom-bottom",
+        "offset": 200,
       },
     };
   },

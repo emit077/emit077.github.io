@@ -9,6 +9,7 @@
   </v-app>
 </template>
 <style lang="scss">
+@import "./assets/css/splitting.scss";
 @import "./assets/css/style.scss";
 @import "./assets/css/animation.scss";
 

@@ -1,0 +1,116 @@
+.section-subtitle {
+  color: saturate(lighten(#182952, 55%), 60%);
+  .subtitle-char {
+    transition: transform 0.4s cubic-bezier(0.3, 0, 0.3, 1), opacity 1s linear;
+    transition-delay: calc(50ms * var(--char-index));
+    opacity: 0.1;
+  }
+
+  &[data-scroll="in"] .subtitle-char {
+    opacity: 1;
+    transform: translateY(0.25em);
+  }
+}
+
+/*------------*/
+// .slide-horizontal {
+//   .char {
+//     overflow: hidden;
+//     color: transparent;
+
+//     &:before,
+//     &:after {
+//       visibility: visible !important;
+//       color: #FFF;
+//       transition: transform 0.5s cubic-bezier(0.9,0,.2,1);
+//       transition-delay: calc( 0.2s + ( 0.02s * ( var(--char-index)) ) );
+//     }
+
+//     &:before {
+//       color: #00C9B1;
+//       transition-delay: calc( 0.02s * ( var(--char-index)) );
+//     }
+//   }
+
+//   &[data-scroll="in"] .char:before {
+//     transition-delay: calc( 0.2s + ( 0.02s * ( var(--char-index)) ) );
+//   }
+//   &[data-scroll="in"] .char:after {
+//     transition-delay: calc( 0.02s * ( var(--char-index)) );
+//   }
+// }
+
+// .slide-horizontal {
+//   .char:before { transform: translateX(110%); }
+//   &[data-scroll="in"] .char:before { transform: translateX(0%); }
+//   &[data-scroll="in"] .char:after { transform: translateX(-110%); }
+// }
+
+/*-------------*/
+@keyframes block {
+  0% {
+    transform: translate(-110%, 110%);
+  }
+  45%,
+  55% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(110%, 0%);
+  }
+}
+.slide-horizontal .char {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+[data-scroll="in"] .char::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 20%;
+  animation: block calc(0.1s * (10)) calc(0.08s * (var(--char-index))) 1 both;
+}
+
+/*-----------------*/
+
+.shift-right {
+  // &:before {
+  //   content: "";
+  //   font: inherit;
+  //   vertical-align: 0.1em;
+  //   display: inline-block;
+  //   transform: scaleY(0) translateX(-1em);
+  //   margin-right: -0.25em;
+  // }
+
+  // &:before,
+  .char {
+    transition: transform 0.8s cubic-bezier(0.75, 0, 0.24, 0.98);
+    transition-delay: calc(0.015s * var(--char-index));
+  }
+
+  .char {
+    display: inline-block;
+    // transform: translateX(-0.15em);
+  }
+
+  // &:hover:before {
+  //   transform: scaleY(1) translateX(0em);
+  // }
+
+  &:hover .char {
+    word-spacing: 15px;
+    // transform: translateX(1em);
+    // transform: translateX(0.5em) translateX(calc(0.1em * var(--char-index)));
+  }
+}
+/*-----*/
+
+

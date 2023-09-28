@@ -1,5 +1,5 @@
 <template>
-  <div class="d-block" :class="$store.state.currentTheme=='dark'?'text-animation':'text-animation'">
+  <div class="d-block anim-text" :class="$store.state.currentTheme=='dark'?'text-animation':'text-animation'" data-splitting>
     <svg viewBox="0 0 340 150">
       <text x="0%" y="35%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">Amit</text>
       <text x="-1%" y="82%" dy=".15em" :class="$vuetify.display.mobile?'text-h1 ':' text-h1'">Kumar</text>
@@ -18,6 +18,11 @@ $stroke-color: rgba(var(--v-theme-stroke-1));
   text-align: left;
   font-size: 80px !important;
   fill: rgba(var(--v-theme-stroke-1));
+}
+.text-animation{
+  &[data-scroll="out"] text{
+    animation: none;
+  }
 }
 
 @keyframes stroke {
@@ -47,8 +52,14 @@ $stroke-color: rgba(var(--v-theme-stroke-1));
 }
 </style>
 <script>
+import ScrollOut from "scroll-out";
 export default {
   name: 'AnimatedText',
   data: () => ({}),
+  mounted() {
+    ScrollOut({
+      targets: "[data-splitting]",
+    });
+  },
 }
 </script>

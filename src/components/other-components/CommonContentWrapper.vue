@@ -1,21 +1,29 @@
 <template>
-  <h4 class="fs-nunito section-title splitting " :class="'section-title-' + this.$store.state.currentTheme" data-splitting>
-    <span
-      v-for="(text, i) in title.split('')"
-      :key="i"
-      class=""
-      :style="{ '--char-index': i }"
+  <span>
+    <h4
+      class="fs-nunito section-title slide-horizontal"
+      :class="'section-title-' + this.$store.state.currentTheme"
+      data-splitting
+    >
+      <span
+        v-for="(text, i) in title.split('')"
+        :key="i"
+        class="char"
+        :data-char="text"
+        :style="{ '--char-index': i, '--char-total': subtitle.length }"
       >
         {{ text }}
-      </span></h4>
-  <h2 class="my-10 text-stroke-1 section-subtitle splitting  text--blocks" data-splitting>
-    
-    <div  v-for="(subtitletext, i) in subtitle.split('<br/>')" :key="i">
+      </span>
+    </h4>
+  </span>
+
+  <h2 class="my-10 text-stroke-1 section-subtitle" data-splitting>
+    <div v-for="(subtitletext, i) in subtitle.split('<br/>')" :key="i">
       <span
-      v-for="(text, i) in subtitletext.split('')"
-      :key="i"
-      class="char"
-      :style="{ '--char-index': i }"
+        v-for="(text, i) in subtitletext.split('')"
+        :key="i"
+        class="subtitle-char"
+        :style="{ '--char-index': i }"
       >
         {{ text }}
       </span>
@@ -43,7 +51,7 @@
   content: "";
   border-top: 2px solid;
   width: 25px;
-  margin: 4px 10px 4px 0px;
+  margin: 4px 10px 12px 0px;
   transform: translateY(-50%);
 }
 
