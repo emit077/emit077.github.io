@@ -23,9 +23,17 @@
         :key="i"
         :class="$vuetify.display.mobile ? 'text-center ' : ' text-left'"
       >
-        <div class="skills-card align-center text-center pa-4 ma-4">
+        <div
+          class="skills-card align-center text-center pa-4 ma-4"
+          :style="{ '--data-index': i % 2 == 0 ? i : i / 4 }"
+        >
           <div class="mt-4">
-            <img :src="skill.img" :alt="skill.title" width="40" />
+            <img
+              :src="skill.img"
+              :alt="skill.title"
+              height="40"
+              :style="{ '--data-index': i % 2 == 0 ? i : i / 4 }"
+            />
             <p v-html="skill.title"></p>
           </div>
         </div>
@@ -48,19 +56,61 @@
 
   p {
     color: rgb(var(--v-theme-stroke-1));
+    transform-origin: bottom;
+    animation: text_animate 5s cubic-bezier(0.9, 0.03, 0.69, 0.22)
+      calc(3s * var(--data-index)) alternate infinite;
   }
 
   img {
-    transition-duration: 1s;
-    transform-origin: bottom;
+    background-clip: transparent;
+    transform-origin: center;
     filter: grayscale(10);
+    animation: img_animate 5s cubic-bezier(0.9, 0.03, 0.69, 0.22)
+      calc(3s * var(--data-index)) alternate infinite;
   }
 }
 
-.skills-card:hover {
-  img {
-    transform: scale(1.4);
+// .skills-card:hover {
+//   animation: none;
+//   img {
+//     transform: scale(1.4);
+//     filter: none;
+//   }
+// }
+
+@keyframes img_animate {
+  0%,
+  30%,
+  90%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1);
     filter: none;
+    filter: grayscale(10);
+  }
+  40%,
+  50%,
+  60% {
+    -webkit-transform: scale(1.7);
+    transform: scale(1.7);
+    -ms-transform: scale(1.7); /* IE 9 */
+    -webkit-transform: scale(1.7);
+    filter: none;
+  }
+}
+@keyframes text_animate {
+  0%,
+  30%,
+  90%,
+  100% {
+    opacity: 1;
+  }
+  40%,
+  50%,
+  60% {
+    opacity: 0.01;
   }
 }
 </style>
@@ -101,12 +151,21 @@ export default {
           img: require("@/assets/images/tech-stack/vuetify.svg"),
         },
         {
+          title: "Nuxt",
+          width: 45,
+          img: require("@/assets/images/tech-stack/nuxt.svg"),
+        },
+        {
           title: "Javascript",
           img: require("@/assets/images/tech-stack/javascript.svg"),
         },
         {
           title: "Git",
           img: require("@/assets/images/tech-stack/git.svg"),
+        },
+        {
+          title: "React",
+          img: require("@/assets/images/tech-stack/react.svg"),
         },
         {
           title: "Jquery",
@@ -129,12 +188,24 @@ export default {
           img: require("@/assets/images/tech-stack/postgresql.svg"),
         },
         {
+          title: "Figma",
+          img: require("@/assets/images/tech-stack/figma.svg"),
+        },
+        {
           title: "AWS",
-          img: require("@/assets/images/tech-stack/amazon-web-services.svg"),
+          img: require("@/assets/images/tech-stack/aws.svg"),
         },
         {
           title: "firebase",
           img: require("@/assets/images/tech-stack/firebase.svg"),
+        },
+        {
+          title: "Nginx",
+          img: require("@/assets/images/tech-stack/nginx.svg"),
+        },
+        {
+          title: "Ubuntu",
+          img: require("@/assets/images/tech-stack/ubuntu.svg"),
         },
       ],
     };
