@@ -1,11 +1,16 @@
 <template>
-  <v-app :theme="$store.state.currentTheme" class="bg-img" :class="getClassName()">
-    <app-bar/>
+  <v-app
+    :theme="$store.state.currentTheme"
+    class="bg-img"
+    :class="getClassName()"
+  >
+    <!-- <line-follower /> -->
+    <app-bar />
     <v-main class="main-body">
-      <router-view/>
+      <router-view />
     </v-main>
-    <app-footer/>
-    <snack-bar/>
+    <app-footer />
+    <snack-bar />
   </v-app>
 </template>
 <style lang="scss">
@@ -24,48 +29,48 @@
 }
 
 .bg-img-dark {
-  background-image: url('@/assets/images/dark/bg-Img.svg');
+  background-image: url("@/assets/images/dark/bg-Img.svg");
+  background-blend-mode: difference;
 }
 
 .bg-img-light {
-  background-image: url('@/assets/images/light/bg-Img.svg');
+  background-image: url("@/assets/images/light/bg-Img.svg");
 }
 
 .bg-img-mobile-dark {
-  background-image: url('@/assets/images/dark/bg-img-mobile.svg');
+  background-image: url("@/assets/images/dark/bg-img-mobile.svg");
 }
 
 .bg-img-mobile-light {
-  background-image: url('@/assets/images/light/bg-img-mobile.svg');
+  background-image: url("@/assets/images/light/bg-img-mobile.svg");
 }
 </style>
 
 <script>
-import AppBar from "@/components/layout-components/AppBar"
-import AppFooter from "@/components/layout-components/AppFooter"
-import SnackBar from "@/components/other-components/SnackBar"
+import AppBar from "@/components/layout-components/AppBar";
+import AppFooter from "@/components/layout-components/AppFooter";
+import SnackBar from "@/components/other-components/SnackBar";
+// import LineFollower from "@/components/other-components/shapes/LineFollower";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     AppBar,
     AppFooter,
-    SnackBar
+    SnackBar,
+    // LineFollower,
   },
 
-  data: () => ({
-  }),
-  mounted() {
-  },
+  data: () => ({}),
+  mounted() {},
   methods: {
     getClassName() {
       if (this.$vuetify.display.mobile) {
-        return "bg-img-mobile-" + this.$store.state.currentTheme
+        return "bg-img-mobile-" + this.$store.state.currentTheme;
       } else {
-        return "bg-img-" + this.$store.state.currentTheme
+        return "bg-img-" + this.$store.state.currentTheme;
       }
-
     },
-  }
-}
+  },
+};
 </script>

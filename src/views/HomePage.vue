@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- <link-style></link-style> -->
+    <!-- <moving-lines /> -->
     <landing-screen />
     <my-experience />
     <my-services />
@@ -20,6 +21,7 @@ import MyExperience from "@/components/home-page-components/MyExperience";
 import MyProjects from "@/components/home-page-components/MyProjects";
 import MyServices from "@/components/home-page-components/MyServices";
 import MySkills from "@/components/home-page-components/MySkills";
+// import MovingLines from "@/components/other-components/shapes/MovingLines";
 // import LinkStyle from "@/components/other-components/LinkStyle";
 
 export default {
@@ -32,6 +34,7 @@ export default {
     MyServices,
     MyProjects,
     MySkills,
+    // MovingLines,
     // LinkStyle
   },
   data() {
