@@ -163,7 +163,7 @@ export default {
         "min-height": screen.height - 200 + "px",
       },
       title: "Introduction",
-      subtitle: "Fullstack Developer & UI/UX Designer, Based in Raipur",
+      subtitle: "Fullstack Developer & UI/UX Designer, Based in Raipur, India",
       description: "Passionate about visual design and technology. I specialized in fullstack development and UI/UX design and my passion is about building elegant and professional user interfaces and websites."
     }
   },

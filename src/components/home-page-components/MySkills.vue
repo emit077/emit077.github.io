@@ -31,7 +31,7 @@
             <img
               :src="skill.img"
               :alt="skill.title"
-              height="40"
+              width="70"
               :style="{ '--data-index': i % 2 == 0 ? i : i / 4 }"
             />
             <p v-html="skill.title"></p>
@@ -93,10 +93,10 @@
   40%,
   50%,
   60% {
-    -webkit-transform: scale(1.7);
-    transform: scale(1.7);
-    -ms-transform: scale(1.7); /* IE 9 */
-    -webkit-transform: scale(1.7);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+    -ms-transform: scale(1.4); /* IE 9 */
+    -webkit-transform: scale(1.4);
     filter: none;
   }
 }
@@ -135,77 +135,77 @@ export default {
       tech_stacks: [
         {
           title: "Python",
-          img: require("@/assets/images/tech-stack/python.svg"),
+          img: require("@/assets/images/tech-stack/python.png"),
         },
         {
           title: "Django",
-          img: require("@/assets/images/tech-stack/django.svg"),
+          img: require("@/assets/images/tech-stack/django.png"),
         },
         {
           title: "Vue js",
-          img: require("@/assets/images/tech-stack/vue-js.svg"),
+          img: require("@/assets/images/tech-stack/vue.png"),
         },
         {
           title: "Vuetify",
           width: 45,
-          img: require("@/assets/images/tech-stack/vuetify.svg"),
+          img: require("@/assets/images/tech-stack/vuetify.png"),
         },
         {
           title: "Nuxt",
           width: 45,
-          img: require("@/assets/images/tech-stack/nuxt.svg"),
+          img: require("@/assets/images/tech-stack/nuxt.png"),
         },
         {
           title: "Javascript",
-          img: require("@/assets/images/tech-stack/javascript.svg"),
+          img: require("@/assets/images/tech-stack/js.png"),
         },
         {
           title: "Git",
-          img: require("@/assets/images/tech-stack/git.svg"),
+          img: require("@/assets/images/tech-stack/git.png"),
         },
         {
           title: "React",
-          img: require("@/assets/images/tech-stack/react.svg"),
+          img: require("@/assets/images/tech-stack/react.png"),
         },
         {
           title: "Jquery",
-          img: require("@/assets/images/tech-stack/jquery.svg"),
+          img: require("@/assets/images/tech-stack/jquery.png"),
         },
         {
           title: "HTML5",
-          img: require("@/assets/images/tech-stack/html-5.svg"),
+          img: require("@/assets/images/tech-stack/html.png"),
         },
         {
           title: "SASS",
-          img: require("@/assets/images/tech-stack/sass.svg"),
+          img: require("@/assets/images/tech-stack/sass.png"),
         },
         {
           title: "Mysql",
-          img: require("@/assets/images/tech-stack/mysql.svg"),
+          img: require("@/assets/images/tech-stack/mysql.png"),
         },
         {
           title: "Postgresql",
-          img: require("@/assets/images/tech-stack/postgresql.svg"),
+          img: require("@/assets/images/tech-stack/postgres.png"),
         },
         {
           title: "Figma",
-          img: require("@/assets/images/tech-stack/figma.svg"),
+          img: require("@/assets/images/tech-stack/figma.png"),
         },
         {
           title: "AWS",
-          img: require("@/assets/images/tech-stack/aws.svg"),
+          img: require("@/assets/images/tech-stack/aws.png"),
         },
         {
           title: "firebase",
-          img: require("@/assets/images/tech-stack/firebase.svg"),
+          img: require("@/assets/images/tech-stack/firebase.png"),
         },
         {
           title: "Nginx",
-          img: require("@/assets/images/tech-stack/nginx.svg"),
+          img: require("@/assets/images/tech-stack/nginx.png"),
         },
         {
           title: "Ubuntu",
-          img: require("@/assets/images/tech-stack/ubuntu.svg"),
+          img: require("@/assets/images/tech-stack/ubuntu.png"),
         },
       ],
     };
