@@ -3,6 +3,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 
+
+
+@font-face {
+  font-family: 'England';
+  src: url('@/assets/fonts/Moonllime.ttf');
+  // src: url('@/assets/fonts/England.ttf');
+
+}
+#font-england{
+  font-family: "England"  !important;
+}
+// @font-face {
+//   font-family: 'Magzo';
+//   src: url('../fonts/Magzo.ttf');
+// }
+// @font-face {
+//   font-family: 'Moonllime';
+//   src: url('../fonts/Moonllime.ttf');
+// }
+@font-face {
+  font-family: 'salita';
+  src: url('@/assets/fonts/Moonllime.ttf');
+  // }
+}
+
+#font-salita{
+  font-family: "salita"  !important;
+}
+
+
 .v-application {
   [class*="text-"] {
     color: #36405a;

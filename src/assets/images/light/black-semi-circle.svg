@@ -1,6 +1,6 @@
 <svg width="712" height="747" viewBox="0 0 712 747" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="166" cy="381" r="270" fill="#181922" fill-opacity="0.08"/>
-<line x1="599.787" y1="427.592" x2="392.292" y2="635.087" stroke="#2E9A45" stroke-opacity="0.5"/>
+<!-- <line x1="599.787" y1="427.592" x2="392.292" y2="635.087" stroke="#2E9A45" stroke-opacity="0.5"/>
 <line x1="557.994" y1="527.367" x2="491.359" y2="594.002" stroke="#2E9A45" stroke-opacity="0.5"/>
 <line y1="-0.5" x2="224.743" y2="0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 587.899 467.057)" stroke="#2E9A45" stroke-opacity="0.5"/>
 <line x1="604.382" y1="394.713" x2="359.413" y2="639.682" stroke="#2E9A45" stroke-opacity="0.5"/>
@@ -26,5 +26,5 @@
 <line x1="100.982" y1="495.061" x2="459.067" y2="136.976" stroke="#2E9A45" stroke-opacity="0.5"/>
 <line x1="110.961" y1="513.367" x2="475.986" y2="148.342" stroke="#2E9A45" stroke-opacity="0.5"/>
 <line x1="123.021" y1="529.591" x2="493.597" y2="159.014" stroke="#2E9A45" stroke-opacity="0.5"/>
-<line y1="-0.5" x2="527.02" y2="-0.5" transform="matrix(0.708447 -0.705764 0.705813 0.708398 136.129 545.475)" stroke="#2E9A45" stroke-opacity="0.5"/>
+<line y1="-0.5" x2="527.02" y2="-0.5" transform="matrix(0.708447 -0.705764 0.705813 0.708398 136.129 545.475)" stroke="#2E9A45" stroke-opacity="0.5"/> -->
 </svg>

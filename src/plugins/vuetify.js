@@ -3,7 +3,7 @@ import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
 
 // Vuetify
-import {createVuetify} from "vuetify";
+import { createVuetify } from "vuetify";
 
 export default createVuetify({
   theme: {
@@ -24,17 +24,15 @@ export default createVuetify({
           info: "#2196F3",
           success: "#4CAF50",
           warning: "#FB8C00",
-          
+
           "fill-1": "#434656",
           "fill-2": "#434656",
           "fill-3": "#0DCCC2",
           "stroke-1": "#434656",
           "stroke-12": "#FFFFFF",
-          "stroke-2": "#F85C5C",
+          "stroke-2": "#3CC47C", //"#F85C5C",
           "stroke-3": "#F3B24A",
           "stroke-4": "#1C222B",
-
-
         },
       },
       dark: {
@@ -42,7 +40,7 @@ export default createVuetify({
           surface: "#1C222B",
           primary: "#00fffa",
           secondary: "#03DAC6",
-          heading:"#042070",
+          heading: "#042070",
           error: "#B00020",
           info: "#00fffa",
           success: "#4CAF50",
@@ -53,11 +51,9 @@ export default createVuetify({
           "fill-3": "#0DCCC2",
           "stroke-1": "#FFFFFF",
           "stroke-12": "#FFFFFF",
-          "stroke-2": "#F85C5C",
+          "stroke-2": "#3CC47C", //"#F85C5C",
           "stroke-3": "#F3B24A",
           "stroke-4": "#F5F5F5",
-
-
         },
       },
     },

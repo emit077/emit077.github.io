@@ -39,8 +39,7 @@
       stroke-width: 2px;
       stroke-dasharray: var(--offset, 69px) 278px;
       stroke-dashoffset: 361px;
-      transition: stroke 0.25s ease var(--stroke-delay, 0s),
-        stroke-dasharray 0.35s;
+      transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
     }
     &:hover {
       --spacing: 4px;

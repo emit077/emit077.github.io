@@ -11,21 +11,15 @@
       :class="$vuetify.display.mobile ? 'mb-n6' : 'mb-n15'"
       v-bind="shado_text_animation"
     >
-      Let's Talk
+      Hire Me
     </p>
     <v-row align="center" justify="center">
-      <v-col sm="7" cols="12" class="justify-center">
+      <v-col sm="12" cols="12" class="justify-center">
         <common-content-wrapper
           :title="title"
           :subtitle="subtitle"
           :description="description"
         />
-        <p class="mt-5">
-          <a href="mailto:emitsahu077@gmail.com" class="text-stroke-2"
-            >emitsahu077@gmail.com
-            <v-icon size="x-small" class="ml-n1">mdi-arrow-right</v-icon>
-          </a>
-        </p>
         <circle-outline
           class="float-right move-animation-2"
           :stroke="'#F3B24A'"
@@ -35,96 +29,19 @@
         />
       </v-col>
       <v-col
-        sm="5"
+        sm="12"
         cols="12"
-        class="align-start text-right justify-end"
+        class="text-center"
         justify="right"
         :class="$vuetify.display.mobile ? '' : 'pl-10'"
       >
+        <SociaLinks />
+
         <circle-outline
           class="move-animation-4 mb-n13"
           :stroke="'#7986FD'"
           style="width: 25px"
         />
-        <div
-          class="contact-card text-left"
-          :class="$vuetify.display.mobile ? 'mt-8 px-4 py-3' : 'px-5 py-3'"
-        >
-          <v-card-text>
-            <v-form
-              ref="contact_form"
-              v-model="valid"
-              lazy-validation
-              @submit.prevent="submitForm()"
-            >
-              <div class="form-input">
-                <label for="name" class="text-stroke-1">Name</label><br />
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  v-model="name"
-                  maxlength="80"
-                  @input="validateInput(name, 'name')"
-                  :placeholder="placeholder.name"
-                /><br />
-              </div>
-
-              <div class="form-input">
-                <label for="mobile" class="text-stroke-1">Mobile</label><br />
-                <input
-                  type="text"
-                  id="mobile"
-                  name="mobile"
-                  v-model="mobile"
-                  maxlength="10"
-                  @input="validateMobile(mobile)"
-                  @keydown="restrictChar($event)"
-                  :placeholder="placeholder.mobile"
-                /><br />
-              </div>
-              <div class="form-input">
-                <label for="email" class="text-stroke-1">Email</label><br />
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  v-model="email"
-                  @input="validateEmail(email)"
-                  maxlength="120"
-                  :placeholder="placeholder.email"
-                /><br />
-              </div>
-              <div class="form-input">
-                <label for="message" class="text-stroke-1">Message</label><br />
-                <textarea
-                  type="text"
-                  id="message"
-                  name="message"
-                  v-model="message"
-                  style="height: 80px"
-                  @input="validateInput(message, 'message')"
-                  :placeholder="placeholder.msg"
-                >
-                </textarea>
-              </div>
-              <div class="text-center mt-5">
-                <v-btn
-                  color="stroke-2"
-                  width="150"
-                  height="40"
-                  class="send-btn"
-                  type="submit"
-                  :loading="btn_loading"
-                >
-                  <span class="text-white font-weight-bold text-subtitle-1"
-                    >Send</span
-                  >
-                </v-btn>
-              </div>
-            </v-form>
-          </v-card-text>
-        </div>
         <circle-outline
           class="float-left move-animation-2 mt-n15"
           :stroke="'#F3B24A'"
@@ -190,6 +107,7 @@
 import CommonContentWrapper from "@/components/other-components/CommonContentWrapper";
 import ZigZagLine from "@/components/other-components/shapes/ZigZagLine";
 import CircleOutline from "@/components/other-components/shapes/CircleOutline";
+import SociaLinks from "@/components/other-components/SociaLinks";
 import { createUser } from "@/firebase-config";
 
 export default {
@@ -198,13 +116,19 @@ export default {
     CommonContentWrapper,
     ZigZagLine,
     CircleOutline,
+    SociaLinks,
   },
   data() {
     return {
       title: "Contact me",
       subtitle: "Get in Touch",
-      description:
-        "Any type of query or discussion I’m open to talk. Drop a message and will get back to you. <br><br> Or Alternatively, shoot me an email at.",
+      description: `Hey there! 🚀 Looking for someone to bring your ideas to life? I'm your go-to! With skills in end-to-end product development, I'm all about creativity and innovation. Let’s team up to create some epic projects that stand out.<br><br> 💡 Whether you need help with UI/UX design, web development or product development, I’ve got you covered! Hit me up if you want to chat about how we can work together—I’m just a message away! Just shoot me an email at <a
+            href="mailto:emitsahu077@gmail.com"
+            class="text-stroke-2 text-decoration-none text-h6"
+            >emitsahu077@gmail.com
+          </a>. Let’s make something awesome happen! ✌️✨`,
+      // // description:
+      // //   "Any type of query or discussion I’m open to talk. Drop a message and will get back to you. <br><br> Or Alternatively, shoot me an email at.",
       //  form
       name: "",
       mobile: "",
@@ -256,10 +180,7 @@ export default {
         )
         .catch(
           function (error) {
-            this.showSnakeBar(
-              "error",
-              "Something went wrong, Please try again letter."
-            );
+            this.showSnakeBar("error", "Something went wrong, Please try again letter.");
           }.bind(this)
         )
         .finally();

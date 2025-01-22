@@ -1,10 +1,6 @@
 <template>
-  <v-app
-    :theme="$store.state.currentTheme"
-    class="bg-img"
-    :class="getClassName()"
-  >
-    <!-- <line-follower /> -->
+  <v-app :theme="$store.state.currentTheme" class="bg-img" :class="getClassName()">
+    <!-- <line-follower />  -->
     <app-bar />
     <v-main class="main-body">
       <router-view />
