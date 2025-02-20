@@ -1,63 +1,37 @@
 {
-  "name": "amit-portfolio",
-  "version": "0.1.0",
+  "name": "portfolio_V2",
   "private": true,
+  "type": "module",
+  "version": "0.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
     "deploye": "sh deploye.sh"
   },
   "dependencies": {
-    "@mdi/font": "5.9.55",
-    "aos": "^3.0.0-beta.6",
-    "core-js": "^3.8.3",
-    "firebase": "^9.9.2",
+    "@mdi/font": "7.4.47",
     "roboto-fontface": "*",
-    "scroll-out": "^2.2.12",
-    "vue": "^3.2.13",
-    "vue-router": "^4.0.3",
-    "vuetify": "npm:@vuetify/nightly@next",
-    "vuex": "^4.0.0",
-    "webfontloader": "^1.0.0"
+    "vue": "^3.4.31",
+    "vuetify": "^3.6.14"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "sass": "^1.32.7",
-    "sass-loader": "^12.0.0",
-    "vue-cli-plugin-vuetify": "~2.5.1",
-    "webpack-plugin-vuetify": "^2.0.0-alpha.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {
-      "no-console": "off",
-      "no-unused-vars": "off",
-      "no-debugger": "off"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+    "@eslint/js": "^9.14.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "eslint": "^9.14.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.4.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "sass": "1.77.8",
+    "sass-embedded": "^1.77.8",
+    "unplugin-fonts": "^1.1.1",
+    "unplugin-vue-components": "^0.27.2",
+    "unplugin-vue-router": "^0.10.0",
+    "vite": "^5.4.0",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vue-router": "^4.4.0"
+  }
 }

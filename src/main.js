@@ -1,26 +1,20 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import vuetify from "./plugins/vuetify";
-import { loadFonts } from "./plugins/webfontloader";
+/**
+ * main.js
+ *
+ * Bootstraps Vuetify and other plugins then mounts the App`
+ */
 
-import rules from "@/helper/rules";
-import globalMixin from "@/helper/mixins/global-mixin";
+// Plugins
+import { registerPlugins } from '@/plugins'
 
-// animation
-import AOS from "aos";
-import "aos/dist/aos.css";
+// Components
+import App from './App.vue'
 
-loadFonts();
-AOS.init();
+// Composables
+import { createApp } from 'vue'
 
+const app = createApp(App)
 
-const app = createApp(App);
-app.mixin(globalMixin);
-app.config.globalProperties.$rules = rules;
+registerPlugins(app)
 
-app.use(router);
-app.use(store);
-app.use(vuetify);
-app.mount("#app");
+app.mount('#app')
