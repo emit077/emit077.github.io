@@ -15,6 +15,9 @@ body {
 }
 
 /* Typography */
+.text-paragraph{
+  font-size: calc(100% + .3vw);
+}
 
 .shadow-text {
     font-family: 'Poppins';
@@ -22,9 +25,11 @@ body {
     font-size: calc(120% + 10vw);
     color: rgb(var(--v-theme-background));
     text-transform: capitalize;
-    background:linear-gradient(180deg, rgba(234,191,255,1) 0%, rgba(255,255,255,0.01) 38%, rgba(135,38,183,0.1) 100%);
+    background:linear-gradient(180deg, rgba(var(--v-theme-primary)) 0%, rgba(var(--v-theme-primary),0.1) 38%, rgba(var(--v-theme-primary),0.5) 100%);
+    // background:linear-gradient(180deg, rgba(234,191,255,0.5) 0%, rgba(255,255,255,0.01) 38%, rgba(135,38,183,0.1) 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
-    
+    line-height: 100%;
+    margin: 0;
   }

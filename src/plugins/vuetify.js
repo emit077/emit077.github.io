@@ -32,6 +32,9 @@ export default createVuetify({
           info: "#2196F3",
           success: "#4CAF50",
           warning: "#FB8C00",
+          "color-1": "#3CC47C", //green
+          "color-2": "#44C0EF", //blue
+          "color-3": "#7F56D9", //purple
         },
       },
       dark: {

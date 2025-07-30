@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="py-15">
     <!-- shadow text -->
     <p class="shadow-text text-center pa-0">Experience</p>
     <!--  -->
-    <div class="d-flex justify-space-around">
+    <div class="d-flex justify-space-around mt-lg-n10">
       <div class="d-inline-flex">
         <div class="experiance-value">
           {{ experience }}
@@ -36,7 +36,7 @@ let description =
 let experience = "";
 
 const calcExperience = () => {
-  let start_date = new Date("06/01/2019");
+  let start_date = new Date("07/01/2019");
   let current_date = new Date();
   let diffDays = parseInt((current_date - start_date) / (1000 * 60 * 60 * 24), 10);
   let diffYears = parseInt(diffDays / 365);
