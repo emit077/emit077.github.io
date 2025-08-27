@@ -3,9 +3,7 @@
     <div>
       <div class="d-flex justify-center align-center">
         <div class="">
-          <h2 class="sub-hero-text font-rubik-one text-left">
-            <span class="text-color-1-lighten-4">Hey</span> I'm
-          </h2>
+          <h2 class="sub-hero-text font-rubik-one text-left">Hey I'm</h2>
           <h1 class="hero-title-text font-rubik-one text-center">
             Amit<span class="pl-5">Sahu</span>
             <div class="circle">
@@ -70,12 +68,12 @@ $circleSize: 2vw;
   color: rgb(var(--v-theme-primary));
 
   span:nth-of-type(1) {
-    color: rgb(var(--v-theme-color-1));
+    color: rgb(var(--v-theme-color-3));
     display: inline-block;
   }
 }
 .designer-wrapper {
-  border: solid 2px rgb(var(--v-theme-color-3-lighten-4), 0.5);
+  border: solid 2px rgb(var(--v-theme-primary), 0.5);
   display: inline-block;
   position: absolute;
   left: -2px;
@@ -86,26 +84,26 @@ $circleSize: 2vw;
     padding: 0px 8px;
   }
   .cube {
-    height: 8px;
-    width: 8px;
-    background-color: rgb(var(--v-theme-color-3-lighten-4), 0.5);
+    height: 6px;
+    width: 6px;
+    background-color: rgb(var(--v-theme-primary), 1);
     position: absolute;
   }
   .cube-1 {
-    top: -4px;
-    left: -4px;
+    top: -3px;
+    left: -3px;
   }
   .cube-2 {
-    top: -4px;
-    right: -4px;
+    top: -3px;
+    right: -3px;
   }
   .cube-3 {
-    bottom: -4px;
-    left: -4px;
+    bottom: -3px;
+    left: -3px;
   }
   .cube-4 {
-    bottom: -4px;
-    right: -4px;
+    bottom: -3px;
+    right: -3px;
   }
 }
 .circle {
