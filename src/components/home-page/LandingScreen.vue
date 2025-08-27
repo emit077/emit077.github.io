@@ -1,175 +1,251 @@
 <template>
-  <div class="d-flex justify-center align-center" style="min-height: 700px">
-    <div class="py-10 my-15">
-      <div class="d-flex justify-center align-center">
-        <div>
-          <h2 class="sub-hero-text font-rubik-one text-center mb-5">
-            <span class="text-color-1-lighten-4">Hey</span> I'm
-          </h2>
-          <h1 class="hero-title-text font-rubik-one text-center">
-            Amit<span class="pl-5">Sahu</span>
-            <div class="circle">
-              <div class="inner-circle"></div>
-            </div>
-          </h1>
-        </div>
-      </div>
-      <v-container grid-list-xs class="pt-0">
-        <div class="font-rubik-one hero-sub-title-text text-center">
-          a web
-          <div class="position-relative d-inline px-2">
-            <div class="designer-wrapper">
-              <div class="cube cube-1"></div>
-              <div class="cube cube-2"></div>
-              <div class="cube cube-3"></div>
-              <div class="cube cube-4"><MousePointer class="mouse-pointer" /></div>
-            </div>
-            <span class="designe-text">Designer</span>
-          </div>
-
-          <!-- <div class="position-relative d-inline">
-            <MousePointer class="mouse-pointer" />
-          </div> -->
-          and <span> {{ devText }}</span>
-        </div>
-        <div class="v-row justify-center">
-          <p
-            class="font-weight-medium text-center text-primary pt-10 v-col-md-8 v-col-sm-12"
-          >
-            Passionate about visual design and technology. I specialized in fullstack
-            development and UI/UX design and my passion is about building elegant and
-            professional user interfaces and websites.
-          </p>
-        </div>
-      </v-container>
+  <section class="hero">
+    <div class="bg-shapes" aria-hidden="true">
+      <!-- SVG for animated shapes (see below for inline SVG + CSS anim) -->
+      <svg width="100%" height="100%">
+        <circle cx="70" cy="70" r="32" class="bg-circle" />
+        <rect x="80%" y="5%" width="24" height="24" class="bg-rect" />
+        <!-- Add more shapes or animate with CSS/GSAP as needed -->
+      </svg>
     </div>
-  </div>
+    <div class="content">
+      <p class="intro">👋 Hi, I'm</p>
+      <h1 class="name">
+        Amit Sahu
+        <span class="circle-anim"></span>
+      </h1>
+      <div class="titles">
+        <!-- <span class="badge badge-designer">Web Designer</span> -->
+        <span class="badge badge-dev">
+          <Transition name="title-fade">
+            <!-- <span :key="currentTitle">{{ currentTitle }}</span> -->
+            <span>{{ currentTitle }}</span>
+          </Transition>
+        </span>
+      </div>
+      <p class="summary py-5">
+        I craft stunning & performant web experiences specializing in fullstack
+        development and UI/UX. I'm passionate about building elegant, professional
+        interfaces and seamless websites.
+      </p>
+      <a href="#portfolio" class="cta-btn">See My Work</a>
+    </div>
+  </section>
 </template>
-<style lang="scss" scoped>
-$circleSize: 2vw;
-
-.sub-hero-text {
-  font-size: calc(100% + 1vw);
-  font-weight: 500;
-  color: rgb(var(--v-theme-primary));
-  padding-left: 2.2vw;
-}
-.hero-title-text {
-  font-size: calc(100% + 8vw);
-  font-weight: bolder;
-  color: rgb(var(--v-theme-primary));
-  line-height: 115%;
-}
-.hero-sub-title-text {
-  font-size: calc(100% + 1.1vw);
-  font-weight: normal;
-  line-height: 150%;
-  color: rgb(var(--v-theme-primary));
-
-  span:nth-of-type(1) {
-    color: rgb(var(--v-theme-color-1));
-    display: inline-block;
-  }
-  .designe-text {
-    color: rgb(var(--v-theme-color-3-lighten-1)) !important;
-    // -webkit-text-fill-color: rgb(var(--v-theme-background));
-    // -webkit-text-stroke: 0.18vw rgb(var(--v-theme-color-3-lighten-1));
-    padding: 0px 8px;
-  }
-}
-.designer-wrapper {
-  border: solid 2px rgb(var(--v-theme-color-3-lighten-4), 0.5);
-  display: inline-block;
-  position: absolute;
-  animation: expand-box 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-
-  .cube {
-    height: 8px;
-    width: 8px;
-    background-color: rgb(var(--v-theme-color-3-lighten-4), 0.5);
-    position: absolute;
-  }
-  .cube-1 {
-    top: -4px;
-    left: -4px;
-  }
-  .cube-2 {
-    top: -4px;
-    right: -4px;
-  }
-  .cube-3 {
-    bottom: -4px;
-    left: -4px;
-  }
-  .cube-4 {
-    bottom: -4px;
-    right: -4px;
-  }
-}
-.circle {
-  height: $circleSize;
-  width: $circleSize;
-  background-color: rgb(var(--v-theme-color-2));
-  border-radius: 50%;
-  display: inline-block;
-  //   margin-left: -10px;
-  position: relative;
-  animation: move 8s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-
-  .inner-circle {
-    height: calc($circleSize / 4);
-    width: calc($circleSize / 4);
-    background-color: rgb(var(--v-theme-background));
-    border-radius: 50%;
-    z-index: 100;
-    margin: 5px;
-  }
-}
-.mouse-pointer {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-}
-@keyframes expand-box {
-  0% {
-    height: 0;
-    width: 0;
-    opacity: 1;
-  }
-  100% {
-    height: 0;
-    width: 0;
-    opacity: 0;
-  }
-  85% {
-    opacity: 1;
-  }
-  25%,
-  75% {
-    height: calc(100% + 0.5vw);
-  }
-  50% {
-    height: calc(100% + 0.5vw);
-    width: calc(87%);
-  }
-}
-@keyframes move {
-  0%,
-  20% {
-    left: -15px;
-    transform: rotate(0deg);
-  }
-  50% {
-    left: 20px;
-    transform: rotate(360deg);
-  }
-  100% {
-    left: -15px;
-    transform: rotate(0deg);
-  }
-}
-</style>
 
 <script setup>
-let devText = "< Fullstack developer />";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+const titles = ["Fullstack Developer 👨🏻‍💻", "UI/UX Expert 🎨", "Tech Enthusiast 🚀"];
+const currentTitle = ref(titles[0]);
+let idx = 0,
+  timer;
+const rotateTitle = () => {
+  idx = (idx + 1) % titles.length;
+  currentTitle.value = titles[idx];
+};
+onMounted(() => {
+  timer = setInterval(rotateTitle, 2500);
+});
+onBeforeUnmount(() => {
+  clearInterval(timer);
+});
 </script>
+
+<style scoped>
+.hero {
+  position: relative;
+  min-height: 700px;
+  padding: 2rem 1rem;
+  color: rgb(var(--v-theme-primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-circle {
+  fill: #2ec4f144;
+  animation: bgFloat 6s ease-in-out infinite alternate;
+}
+.bg-rect {
+  fill: #e5ffce99;
+  rx: 7;
+  animation: bgFloat2 10s infinite alternate;
+}
+@keyframes bgFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes bgFloat2 {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(1.12) translateX(-16px);
+  }
+}
+.content {
+  z-index: 2;
+  text-align: center;
+  margin: 0 auto;
+}
+.intro {
+  font-size: 1.2rem;
+  color: #2ec4f1;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+  animation: fadeInDown 0.9s;
+}
+.name {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  margin-bottom: 0.6rem;
+  position: relative;
+  animation: fadeIn 1s;
+}
+.circle-anim {
+  display: inline-block;
+  position: absolute;
+  top: -14px;
+  right: -36px;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2ec4f1 60%, #ffb300 100%);
+  animation: bounce 1.7s infinite alternate;
+}
+.titles {
+  margin-top: 0.35em;
+}
+.titles .badge {
+  display: inline-block;
+  padding: 0.35em 1em;
+  margin: 0 0.5em 0.5em 0;
+  font-size: 1.04rem;
+  border-radius: 999px;
+  font-weight: 600;
+  animation-delay: 2s;
+  animation: slideInLeft 1.2s;
+}
+.badge-designer {
+  background: #7047eb22;
+  color: #7047eb;
+  border: 1px solid #7047eb;
+}
+.badge-dev {
+  background: #43c97f22;
+  color: #43c97f;
+  border: 1px solid #43c97f;
+}
+
+.summary {
+  margin: 1em 0 1.3em;
+  font-size: 1.02rem;
+  color: rgb(var(--v-theme-primary));
+  line-height: 1.45;
+  animation: fadeInUp 1.5s;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.4em 1.8em;
+  background: linear-gradient(90deg, #2ec4f1 40%, #43c97f 100%);
+  color: #181a1b;
+  border-radius: 2em;
+  font-weight: 700;
+  font-size: 1.11rem;
+  transition: background 0.23s;
+  box-shadow: 0 4px 20px 0 #2ec4f155;
+  animation: pulse 2s infinite alternate;
+  text-decoration: none;
+  margin-top: 0.6em;
+}
+@media (max-width: 450px) {
+  .name {
+    font-size: 2.2rem;
+  }
+  .summary {
+    font-size: 0.94rem;
+  }
+  .content {
+    padding: 0 0.3rem;
+  }
+  .titles .badge {
+    margin-bottom: 0.35em;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-9px);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    /* transform: translateX(-50px); */
+    opacity: 0;
+  }
+  to {
+    /* transform: none; */
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-32px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(28px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 30px 0 #2ec4f180;
+  }
+  100% {
+    box-shadow: 0 4px 20px 0 #2ec4f122;
+  }
+}
+.title-fade-enter-active,
+.title-fade-leave-active {
+  transition: opacity 0.6s;
+}
+.title-fade-enter-from,
+.title-fade-leave-to {
+  opacity: 0;
+}
+</style>

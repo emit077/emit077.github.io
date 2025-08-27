@@ -1,6 +1,13 @@
 <template>
+  <ZigZagLine class="float-left move-animation-2" :opacity="1"></ZigZagLine>
   <div class="app-padding py-15 my-15" :style="style">
     <SectionHeader :title="title" :subtitle="subtitle" />
+    <circle-outline
+      class="move-animation-3 float-right"
+      :opacity="0.8"
+      :stroke="'#1F7949'"
+      style="width: 15px"
+    />
     <v-row align="end" justify="center" no-gutters>
       <v-col
         cols="4"
@@ -29,12 +36,6 @@
         </div>
       </v-col>
     </v-row>
-    <circle-outline
-      class="move-animation-2 float-left"
-      :opacity="0.8"
-      :stroke="'#1F7949'"
-      style="width: 15px"
-    />
   </div>
 </template>
 <!--  -->

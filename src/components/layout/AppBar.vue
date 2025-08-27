@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="background" stick flat class="px-10 sticky">
+  <v-app-bar color="transparent" stick flat class="px-10 sticky">
     <!-- <template v-slot:prepend>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
     </template> -->

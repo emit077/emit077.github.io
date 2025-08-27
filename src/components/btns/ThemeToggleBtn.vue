@@ -87,10 +87,19 @@ $circle-label-height: 33px;
   transition-delay: 350ms;
   opacity: 1;
 }
+
+.toggle--label-light {
+  background: rgb(175, 175, 176);
+}
+.toggle--label-dark {
+  background: rgb(93, 93, 98);
+}
+
 .toggle--label {
   width: calc($circle-size * 2.6);
   height: $circle-label-height;
-  background: rgb(var(--v-theme-primary), 0.2);
+  // background: rgb(109, 109, 111);
+  // background: rgb(var(--v-theme-primary), 0.2);
   border-radius: calc($circle-size);
   border: 5px solid transparent;
   display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-15">
+  <div class="py-15" id="portfolio">
     <SectionHeader :title="title" :subtitle="subtitle" />
     <v-row class="justify-center">
       <v-col
@@ -37,10 +37,10 @@
               <v-icon size="23" icon="mdi-github"></v-icon>
             </button>
             <button
-              class="link-btn justify-center align-center elevation-2 mr-1"
+              class="link-btn justify-center align-center elevation-2 mr-1 open-in-new-btn"
               @click="OpneLink(project.working_link)"
             >
-              <v-icon size="20" icon="mdi-open-in-new"></v-icon>
+              <v-icon size="18" icon="mdi-open-in-new"></v-icon>
             </button>
           </div>
           <!-- link btn  end -->
@@ -59,7 +59,7 @@
     </v-row>
   </div>
 </template>
-<style>
+<style lang="scss">
 .link-btn {
   height: 35px;
   width: 35px;
@@ -74,6 +74,20 @@
 }
 .project-image .v-img__img--cover {
   object-position: top !important;
+}
+
+.project-card:hover {
+  .project-image {
+    transform: scale(1.1);
+    transition-duration: 1s;
+    transform-origin: bottom;
+  }
+  .mdi-open-in-new {
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+    transform-origin: bottom;
+    color: rgb(var(--v-theme-color-1), 1) !important;
+  }
 }
 </style>
 
