@@ -138,6 +138,14 @@ let tech_stacks = [
     img: new URL("@/assets/images/tech-stack/react.png", import.meta.url).href,
   },
   {
+    title: "React Native",
+    img: new URL("@/assets/images/tech-stack/react.png", import.meta.url).href,
+  },
+  {
+    title: "Next.js",
+    img: new URL("@/assets/images/tech-stack/nextjs.png", import.meta.url).href,
+  },
+  {
     title: "Jquery",
     img: new URL("@/assets/images/tech-stack/jquery.png", import.meta.url).href,
   },
@@ -176,6 +184,26 @@ let tech_stacks = [
   {
     title: "Ubuntu",
     img: new URL("@/assets/images/tech-stack/ubuntu.png", import.meta.url).href,
+  },
+  {
+    title: "OpenAI GPT",
+    img: new URL("@/assets/images/tech-stack/gpt.png", import.meta.url).href,
+  },
+  {
+    title: "Claude AI",
+    img: new URL("@/assets/images/tech-stack/claude.png", import.meta.url).href,
+  },
+  {
+    title: "GitHub Copilot",
+    img: new URL("@/assets/images/tech-stack/github-copilot.png", import.meta.url).href,
+  },
+  {
+    title: "Midjourney",
+    img: new URL("@/assets/images/tech-stack/mid-journey.png", import.meta.url).href,
+  },
+  {
+    title: "Gemini",
+    img: new URL("@/assets/images/tech-stack/gemini.png", import.meta.url).href,
   },
 ];
 const getImageUrl = (path) => {

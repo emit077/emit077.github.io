@@ -6,7 +6,11 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M4 4L18.5 9.99996L12.5 12.5L10 18.5L4 4Z" fill="#000" fill-opacity="1" />
+    <path
+      d="M4 4L18.5 9.99996L12.5 12.5L10 18.5L4 4Z"
+      fill="transparent"
+      fill-opacity="1"
+    />
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -17,6 +21,7 @@
 </template>
 <style lang="scss" scoped>
 path:nth-child(2) {
-  fill: rgb(var(--v-theme-color-3));
+  fill: rgb(var(--v-theme-primary), 0.5);
+  // fill: rgb(var(--v-theme-color-3));
 }
 </style>
