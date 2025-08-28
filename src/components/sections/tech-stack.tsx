@@ -90,8 +90,42 @@ export function TechStack() {
         setMounted(true)
     }, [])
 
-    // Use system theme as fallback during SSR
-    const isDark = mounted ? resolvedTheme === 'dark' : systemTheme === 'dark'
+    // Don't render anything until mounted to prevent hydration mismatch
+    if (!mounted) {
+        return (
+            <section id="tech-stack" className="py-20 bg-muted/30 dark:bg-muted/10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <Badge variant="secondary" className="mb-4">
+                            Technologies
+                        </Badge>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-foreground">
+                            Tech Stack & Tools
+                        </h2>
+                        <p className="text-xl text-muted-foreground dark:text-muted-foreground/80 max-w-3xl mx-auto">
+                            I work with a diverse set of technologies and tools to build
+                            scalable, efficient, and user-friendly applications.
+                        </p>
+                    </div>
+                    <div className="space-y-12">
+                        <div className="text-center">
+                            <div className="animate-pulse">
+                                <div className="h-8 bg-muted rounded w-48 mx-auto mb-4"></div>
+                                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                                    {Array.from({ length: 10 }).map((_, i) => (
+                                        <div key={i} className="h-32 bg-muted rounded animate-pulse"></div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    // Use resolved theme only after mounting
+    const isDark = resolvedTheme === 'dark'
     const techCategories = getTechCategories(isDark)
 
     return (

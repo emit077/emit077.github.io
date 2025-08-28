@@ -11,7 +11,7 @@ interface LoadingScreenProps {
 
 export function LoadingScreen({ isDarkMode = false, type = 'theme', message }: LoadingScreenProps) {
     return (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/30 dark:bg-background/50 loading-screen-blur" style={{ minHeight: '100vh', width: '100vw' }}>
+        <div className="test-loader-screen fixed h-screen inset-0 z-[9999] flex items-center justify-center bg-background/30 dark:bg-background/50 loading-screen-blur" style={{ minHeight: '100vh', width: '100vw' }}>
             <div className="relative w-80">
                 {/* Extended dashed borders */}
                 <div className="absolute -top-20 left-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
