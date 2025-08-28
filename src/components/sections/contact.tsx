@@ -1,91 +1,81 @@
 "use client"
 
-import { useState } from "react"
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Send, Github } from "lucide-react"
-import emailjs from '@emailjs/browser'
-
-interface FormData {
-    name: string
-    email: string
-    message: string
-}
+import { Card, CardContent } from "@/components/ui/card"
+import { Mail, MapPin, Github, Phone, Linkedin, ExternalLink, MessageCircle, Calendar, Clock } from "lucide-react"
 
 const contactInfo = [
     {
         icon: Mail,
         title: "Email",
         value: "emitsahu077@gmail.com",
-        href: "mailto:emitsahu077@gmail.com"
+        href: "mailto:emitsahu077@gmail.com",
+        description: "Send me an email anytime"
+    },
+    {
+        icon: Phone,
+        title: "Phone",
+        value: "+91 8305050674",
+        href: "tel:+918305050674",
+        description: "Call me directly"
     },
     {
         icon: Github,
         title: "GitHub",
         value: "github.com/emit077",
-        href: "https://github.com/emit077"
+        href: "https://github.com/emit077",
+        description: "Check out my code"
     },
     {
         icon: MapPin,
         title: "Location",
         value: "Raipur, Chhattisgarh, India",
-        href: "#"
+        href: "#",
+        description: "Based in India"
+    }
+]
+
+const socialLinks = [
+    {
+        icon: Linkedin,
+        title: "LinkedIn",
+        href: "https://www.linkedin.com/in/amit-kumar-sahu-705a06137",
+        description: "Professional network"
+    },
+    {
+        icon: Github,
+        title: "GitHub",
+        href: "https://github.com/emit077",
+        description: "Open source projects"
+    }
+]
+
+const availabilityInfo = [
+    {
+        icon: Calendar,
+        title: "Available for",
+        value: "Freelance & Full-time",
+        description: "Open to new opportunities"
+    },
+    {
+        icon: Clock,
+        title: "Response time",
+        value: "Within 24 hours",
+        description: "Quick and reliable communication"
+    },
+    {
+        icon: MessageCircle,
+        title: "Preferred contact",
+        value: "Email or Phone",
+        description: "Choose what works best for you"
     }
 ]
 
 export function Contact() {
-    const [formData, setFormData] = useState<FormData>({
-        name: '',
-        email: '',
-        message: ''
-    })
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }))
-    }
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-        setIsSubmitting(true)
-
-        try {
-            // Replace these with your actual EmailJS configuration
-            await emailjs.send(
-                'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-                {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    message: formData.message,
-                    to_name: 'Amit Sahu',
-                },
-                'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
-            )
-
-            setSubmitStatus('success')
-            setFormData({ name: '', email: '', message: '' })
-        } catch (error) {
-            console.error('EmailJS error:', error)
-            setSubmitStatus('error')
-        } finally {
-            setIsSubmitting(false)
-            // Reset status after 5 seconds
-            setTimeout(() => setSubmitStatus('idle'), 5000)
-        }
-    }
-
     return (
-        <section id="contact" className="py-20">
+        <section id="contact" className="py-20 bg-gradient-to-br from-background via-background to-muted/20 dark:from-background dark:via-background dark:to-muted/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -101,171 +91,188 @@ export function Contact() {
                         Let&apos;s Work Together
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Have a project in mind? I&apos;d love to hear about it.
-                        Let&apos;s discuss how we can bring your ideas to life.
+                        Ready to bring your ideas to life? I&apos;m here to help you create something amazing.
+                        Let&apos;s start a conversation and make it happen.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* Contact Information */}
+                {/* Contact Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    {contactInfo.map((info, index) => (
+                        <motion.div
+                            key={info.title}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                        >
+                            <Card className="group card-hover h-full dark:bg-card/50 dark:border-border/30 dark:hover:border-primary/30 dark:hover:bg-card/70">
+                                <CardContent className="p-6 text-center">
+                                    <div className="relative w-16 h-16 mx-auto mb-4 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
+                                        <info.icon className="h-8 w-8 text-primary dark:text-primary" />
+                                    </div>
+                                    <h3 className="font-semibold mb-2">{info.title}</h3>
+                                    <a
+                                        href={info.href}
+                                        target={info.href.startsWith('http') ? '_blank' : undefined}
+                                        rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        className="text-primary hover:text-primary/80 dark:hover:text-primary/90 transition-colors font-medium"
+                                    >
+                                        {info.value}
+                                    </a>
+                                    <p className="text-sm text-muted-foreground dark:text-muted-foreground/80 mt-2">{info.description}</p>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* Main Content Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {/* Why Work With Me */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="space-y-8"
+                        className="lg:col-span-1"
                     >
-                        <div>
-                            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                            <div className="space-y-4">
-                                {contactInfo.map((info, index) => (
-                                    <motion.div
-                                        key={info.title}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                                        viewport={{ once: true }}
-                                        className="flex items-center space-x-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                                    >
-                                        <info.icon className="h-6 w-6 text-primary" />
+                        <Card className="h-full dark:bg-card/50 dark:border-border/30">
+                            <CardContent className="p-8">
+                                <h3 className="text-2xl font-bold mb-6 dark:text-foreground">Why Work With Me?</h3>
+                                <div className="space-y-4">
+                                    <div className="flex items-start space-x-3">
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full mt-2 flex-shrink-0"></div>
                                         <div>
-                                            <p className="font-medium">{info.title}</p>
-                                            <a
-                                                href={info.href}
-                                                target={info.href.startsWith('http') ? '_blank' : undefined}
-                                                rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                                className="text-muted-foreground hover:text-primary transition-colors"
-                                            >
-                                                {info.value}
-                                            </a>
+                                            <p className="font-medium dark:text-foreground">6+ Years Experience</p>
+                                            <p className="text-sm text-muted-foreground dark:text-muted-foreground/80">Professional development expertise</p>
                                         </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 className="text-lg font-semibold mb-4">Why Work With Me?</h4>
-                            <div className="space-y-3 text-muted-foreground">
-                                <div className="flex items-start space-x-3">
-                                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                                    <p>5+ years of professional development experience</p>
+                                    </div>
+                                    <div className="flex items-start space-x-3">
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <p className="font-medium dark:text-foreground">Modern Tech Stack</p>
+                                            <p className="text-sm text-muted-foreground dark:text-muted-foreground/80">Cutting-edge technologies & best practices</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start space-x-3">
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <p className="font-medium dark:text-foreground">User-Focused Design</p>
+                                            <p className="text-sm text-muted-foreground dark:text-muted-foreground/80">Exceptional UX & performance optimization</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start space-x-3">
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <p className="font-medium dark:text-foreground">Clear Communication</p>
+                                            <p className="text-sm text-muted-foreground dark:text-muted-foreground/80">Collaborative approach & transparent process</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="flex items-start space-x-3">
-                                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                                    <p>Expertise in modern web technologies</p>
-                                </div>
-                                <div className="flex items-start space-x-3">
-                                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                                    <p>Strong focus on user experience and performance</p>
-                                </div>
-                                <div className="flex items-start space-x-3">
-                                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                                    <p>Collaborative approach and clear communication</p>
-                                </div>
-                            </div>
-                        </div>
+                            </CardContent>
+                        </Card>
                     </motion.div>
 
-                    {/* Contact Form */}
+                    {/* Availability & Social */}
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
+                        className="lg:col-span-2 space-y-6"
                     >
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>Send a Message</CardTitle>
-                                <CardDescription>
-                                    Fill out the form below and I&apos;ll get back to you as soon as possible.
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <form onSubmit={handleSubmit} className="space-y-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <div>
-                                            <label htmlFor="name" className="block text-sm font-medium mb-2">
-                                                Name *
-                                            </label>
-                                            <Input
-                                                id="name"
-                                                name="name"
-                                                type="text"
-                                                required
-                                                value={formData.name}
-                                                onChange={handleInputChange}
-                                                placeholder="Your name"
-                                                disabled={isSubmitting}
-                                            />
-                                        </div>
-                                        <div>
-                                            <label htmlFor="email" className="block text-sm font-medium mb-2">
-                                                Email *
-                                            </label>
-                                            <Input
-                                                id="email"
-                                                name="email"
-                                                type="email"
-                                                required
-                                                value={formData.email}
-                                                onChange={handleInputChange}
-                                                placeholder="your.email@example.com"
-                                                disabled={isSubmitting}
-                                            />
-                                        </div>
-                                    </div>
+                        {/* Availability Info */}
+                        <Card className="dark:bg-card/50 dark:border-border/30">
+                            <CardContent className="p-8">
+                                <h3 className="text-2xl font-bold mb-6 dark:text-foreground">Availability & Communication</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    {availabilityInfo.map((info, index) => (
+                                        <motion.div
+                                            key={info.title}
+                                            initial={{ opacity: 0, scale: 0.9 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                                            viewport={{ once: true }}
+                                            className="text-center"
+                                        >
+                                            <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center">
+                                                <info.icon className="h-6 w-6 text-primary dark:text-primary" />
+                                            </div>
+                                            <h4 className="font-semibold mb-1 dark:text-foreground">{info.title}</h4>
+                                            <p className="text-primary font-medium mb-1 dark:text-primary">{info.value}</p>
+                                            <p className="text-sm text-muted-foreground dark:text-muted-foreground/80">{info.description}</p>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
 
-                                    <div>
-                                        <label htmlFor="message" className="block text-sm font-medium mb-2">
-                                            Message *
-                                        </label>
-                                        <Textarea
-                                            id="message"
-                                            name="message"
-                                            required
-                                            value={formData.message}
-                                            onChange={handleInputChange}
-                                            placeholder="Tell me about your project..."
-                                            rows={6}
-                                            disabled={isSubmitting}
-                                        />
-                                    </div>
-
-                                    <Button
-                                        type="submit"
-                                        className="w-full"
-                                        disabled={isSubmitting}
-                                    >
-                                        {isSubmitting ? (
-                                            <>
-                                                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                                                Sending...
-                                            </>
-                                        ) : (
-                                            <>
-                                                <Send className="h-4 w-4 mr-2" />
-                                                Send Message
-                                            </>
-                                        )}
-                                    </Button>
-
-                                    {submitStatus === 'success' && (
-                                        <div className="text-green-600 text-center">
-                                            ✅ Message sent successfully! I&apos;ll get back to you soon.
-                                        </div>
-                                    )}
-
-                                    {submitStatus === 'error' && (
-                                        <div className="text-red-600 text-center">
-                                            ❌ Failed to send message. Please try again or contact me directly.
-                                        </div>
-                                    )}
-                                </form>
+                        {/* Social Links */}
+                        <Card className="dark:bg-card/50 dark:border-border/30">
+                            <CardContent className="p-8">
+                                <h3 className="text-2xl font-bold mb-6 dark:text-foreground">Connect With Me</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {socialLinks.map((social, index) => (
+                                        <motion.a
+                                            key={social.title}
+                                            href={social.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            initial={{ opacity: 0, x: 20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                                            viewport={{ once: true }}
+                                            className="group flex items-center space-x-4 p-4 rounded-lg border border-border/50 dark:border-border/30 hover:border-primary/50 dark:hover:border-primary/40 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all"
+                                        >
+                                            <div className="w-10 h-10 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
+                                                <social.icon className="h-5 w-5 text-primary dark:text-primary" />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold group-hover:text-primary dark:group-hover:text-primary transition-colors dark:text-foreground">{social.title}</p>
+                                                <p className="text-sm text-muted-foreground dark:text-muted-foreground/80">{social.description}</p>
+                                            </div>
+                                            <ExternalLink className="h-4 w-4 text-muted-foreground dark:text-muted-foreground/60 group-hover:text-primary dark:group-hover:text-primary transition-colors ml-auto" />
+                                        </motion.a>
+                                    ))}
+                                </div>
                             </CardContent>
                         </Card>
                     </motion.div>
                 </div>
+
+                {/* Call to Action */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className="text-center mt-16"
+                >
+                    <Card className="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20 border-primary/20 dark:border-primary/30">
+                        <CardContent className="p-8">
+                            <h3 className="text-2xl font-bold mb-4 dark:text-foreground">Ready to Start Your Project?</h3>
+                            <p className="text-muted-foreground dark:text-muted-foreground/80 mb-6 max-w-2xl mx-auto">
+                                Whether you have a specific project in mind or just want to explore possibilities,
+                                I&apos;m here to help. Let&apos;s discuss your ideas and turn them into reality.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <Button asChild size="lg" className="group">
+                                    <a href="mailto:emitsahu077@gmail.com">
+                                        <Mail className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
+                                        Send Email
+                                    </a>
+                                </Button>
+                                <Button asChild variant="outline" size="lg" className="group">
+                                    <a href="tel:+918305050674">
+                                        <Phone className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
+                                        Call Now
+                                    </a>
+                                </Button>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </motion.div>
             </div>
         </section>
     )

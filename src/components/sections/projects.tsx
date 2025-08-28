@@ -106,7 +106,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
         style={{ transformOrigin: "top" }}
         className={project.featured ? "md:col-span-2" : ""}
     >
-        <Card className="group card-hover overflow-hidden !p-0 h-full flex flex-col">
+        <Card className="group card-hover overflow-hidden !p-0 h-full flex flex-col dark:bg-card/50 dark:border-border/30 dark:hover:border-primary/30 dark:hover:bg-card/70">
             <div className="relative image-overlay">
                 <div className="aspect-video relative overflow-hidden">
                     <Image
@@ -123,10 +123,10 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
             </div>
 
             <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">
+                <CardTitle className="group-hover:text-primary dark:group-hover:text-primary transition-colors dark:text-foreground">
                     {project.title}
                 </CardTitle>
-                <CardDescription className="text-sm leading-relaxed">
+                <CardDescription className="text-sm leading-relaxed dark:text-muted-foreground/80">
                     {project.description}
                 </CardDescription>
             </CardHeader>
@@ -155,7 +155,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
 
 export function Projects() {
     return (
-        <section id="projects" className="py-20">
+        <section id="projects" className="py-20 bg-gradient-to-br from-background via-background to-muted/5 dark:to-muted/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -167,10 +167,10 @@ export function Projects() {
                     <Badge variant="secondary" className="mb-4">
                         My Work
                     </Badge>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-foreground">
                         Featured Projects
                     </h2>
-                    <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    <p className="text-xl text-muted-foreground dark:text-muted-foreground/80 max-w-3xl mx-auto">
                         Here are some of the projects I&apos;ve worked on, showcasing my expertise
                         in fullstack development, UI/UX design, and problem-solving.
                     </p>
@@ -189,10 +189,10 @@ export function Projects() {
                     viewport={{ once: true }}
                     className="text-center mt-16"
                 >
-                    <p className="text-muted-foreground mb-6">
+                    <p className="text-muted-foreground dark:text-muted-foreground/80 mb-6">
                         These are some of my featured projects showcasing my expertise in fullstack development.
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground dark:text-muted-foreground/80">
                         Want to discuss your project? Feel free to reach out!
                     </p>
                 </motion.div>

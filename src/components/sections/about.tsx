@@ -38,7 +38,7 @@ const stats = [
 
 export function About() {
     return (
-        <section id="about" className="py-20 bg-muted/30">
+        <section id="about" className="py-20 bg-muted/30 dark:bg-muted/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -50,10 +50,10 @@ export function About() {
                     <Badge variant="secondary" className="mb-4">
                         About Me
                     </Badge>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-foreground">
                         Crafting Digital Experiences
                     </h2>
-                    <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    <p className="text-xl text-muted-foreground dark:text-muted-foreground/80 max-w-3xl mx-auto">
                         I love crafting seamless user experiences and developing scalable fullstack applications.
                         With a passion for both design and development, I bridge the gap between beautiful interfaces
                         and robust functionality.
@@ -69,12 +69,12 @@ export function About() {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
                         >
-                            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+                            <Card className="text-center hover:shadow-lg dark:hover:shadow-xl transition-shadow duration-300 dark:bg-card/50 dark:border-border/30">
                                 <CardContent className="p-8">
-                                    <stat.icon className="h-12 w-12 mx-auto mb-4 text-primary" />
-                                    <h3 className="text-3xl font-bold mb-2">{stat.value}</h3>
-                                    <p className="text-lg font-semibold mb-2">{stat.label}</p>
-                                    <p className="text-muted-foreground text-sm">{stat.description}</p>
+                                    <stat.icon className="h-12 w-12 mx-auto mb-4 text-primary dark:text-primary" />
+                                    <h3 className="text-3xl font-bold mb-2 dark:text-foreground">{stat.value}</h3>
+                                    <p className="text-lg font-semibold mb-2 dark:text-foreground">{stat.label}</p>
+                                    <p className="text-muted-foreground dark:text-muted-foreground/80 text-sm">{stat.description}</p>
                                 </CardContent>
                             </Card>
                         </motion.div>
@@ -86,14 +86,14 @@ export function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="bg-background rounded-2xl p-8 md:p-12 shadow-lg border"
+                    className="bg-background dark:bg-card/50 rounded-2xl p-8 md:p-12 shadow-lg dark:shadow-xl border dark:border-border/30"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                            <h3 className="text-2xl md:text-3xl font-bold mb-6 dark:text-foreground">
                                 My Journey in Web Development
                             </h3>
-                            <div className="space-y-4 text-muted-foreground">
+                            <div className="space-y-4 text-muted-foreground dark:text-muted-foreground/80">
                                 <p>
                                     Started my journey in July 2019, I&apos;ve been passionate about creating
                                     digital solutions that make a difference. My experience spans across
@@ -113,27 +113,27 @@ export function About() {
 
                         <div className="space-y-6">
                             <div>
-                                <h4 className="text-lg font-semibold mb-3">What I Do</h4>
+                                <h4 className="text-lg font-semibold mb-3 dark:text-foreground">What I Do</h4>
                                 <div className="space-y-3">
                                     <div className="flex items-center space-x-3">
-                                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                        <span>Frontend Development (React, Next.js, Vue.js)</span>
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full"></div>
+                                        <span className="dark:text-foreground">Frontend Development (React, Next.js, Vue.js)</span>
                                     </div>
                                     <div className="flex items-center space-x-3">
-                                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                        <span>Backend Development (Python, Django, Node.js)</span>
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full"></div>
+                                        <span className="dark:text-foreground">Backend Development (Python, Django, Node.js)</span>
                                     </div>
                                     <div className="flex items-center space-x-3">
-                                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                        <span>UI/UX Design & Prototyping</span>
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full"></div>
+                                        <span className="dark:text-foreground">UI/UX Design & Prototyping</span>
                                     </div>
                                     <div className="flex items-center space-x-3">
-                                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                        <span>Database Design & Optimization</span>
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full"></div>
+                                        <span className="dark:text-foreground">Database Design & Optimization</span>
                                     </div>
                                     <div className="flex items-center space-x-3">
-                                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                        <span>API Development & Integration</span>
+                                        <div className="w-2 h-2 bg-primary dark:bg-primary rounded-full"></div>
+                                        <span className="dark:text-foreground">API Development & Integration</span>
                                     </div>
                                 </div>
                             </div>
