@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -82,8 +83,15 @@ const TechCard = ({ tech, index }: { tech: { name: string, image: string }, inde
 )
 
 export function TechStack() {
-    const { theme } = useTheme()
-    const isDark = theme === 'dark'
+    const { theme, resolvedTheme, systemTheme } = useTheme()
+    const [mounted, setMounted] = React.useState(false)
+
+    React.useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    // Use system theme as fallback during SSR
+    const isDark = mounted ? resolvedTheme === 'dark' : systemTheme === 'dark'
     const techCategories = getTechCategories(isDark)
 
     return (

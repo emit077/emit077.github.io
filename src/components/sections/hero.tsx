@@ -13,42 +13,42 @@ export function Hero() {
                     <div className="relative w-full max-w-5xl">
 
                         {/* Corner markers with extending lines */}
-                        <div className="absolute -top-8 -left-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/60 rounded-full flex items-center justify-center shadow-sm dark:shadow-lg">
+                        <div className="absolute -top-8 -left-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/10 rounded-full">
                         </div>
-                        <div className="absolute -top-8 -right-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/60 rounded-full flex items-center justify-center shadow-sm dark:shadow-lg">
+                        <div className="absolute -top-8 -right-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/10 rounded-full">
                         </div>
-                        <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/60 rounded-full flex items-center justify-center shadow-sm dark:shadow-lg">
+                        <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/10 rounded-full">
                         </div>
-                        <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/60 rounded-full flex items-center justify-center shadow-sm dark:shadow-lg">
+                        <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/10 rounded-full">
                         </div>
                         {/* Extending lines from corners */}
-                        <div className="absolute -top-20 left-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/60"></div>
-                        <div className="absolute top-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60"></div>
-                        <div className="absolute -top-20 left-1/3 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/60"></div>
-                        <div className="absolute -top-20 left-2/3 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/60"></div>
+                        <div className="absolute -top-20 left-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
+                        <div className="absolute top-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10"></div>
+                        <div className="absolute -top-20 left-1/3 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
+                        <div className="absolute -top-20 left-2/3 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
 
-                        <div className="absolute -top-20 right-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/60"></div>
-                        <div className="absolute top-0 -right-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60"></div>
+                        <div className="absolute -top-20 right-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
+                        <div className="absolute top-0 -right-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10"></div>
 
-                        <div className="absolute -bottom-20 left-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/60"></div>
-                        <div className="absolute bottom-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60"></div>
-                        <div className="absolute -bottom-20 left-1/3 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/60"></div>
-                        <div className="absolute -bottom-20 left-2/3 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/60"></div>
+                        <div className="absolute -bottom-20 left-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
+                        <div className="absolute bottom-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10"></div>
+                        <div className="absolute -bottom-20 left-1/3 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
+                        <div className="absolute -bottom-20 left-2/3 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
 
-                        <div className="absolute -bottom-20 right-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/60"></div>
-                        <div className="absolute bottom-0 -right-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60"></div>
+                        <div className="absolute -bottom-20 right-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
+                        <div className="absolute bottom-0 -right-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10"></div>
 
                         {/* Main content container */}
-                        <div className="relative border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/60 bg-transparent backdrop-blur-sm">
+                        <div className="relative border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/10 bg-transparent backdrop-blur-sm">
 
                             {/* Content sections */}
                             <div className="flex flex-col">
 
                                 {/* Main headline */}
-                                <div className="relative border-b border-dashed border-gray-300 dark:border-b-1 dark:border-dashed dark:border-primary/60 p-8 md:p-12 bg-transparent text-center">
+                                <div className="relative border-b border-dashed border-gray-300 dark:border-b-1 dark:border-dashed dark:border-primary/10 p-8 md:p-12 bg-transparent text-center">
                                     {/* Extending lines from headline */}
-                                    <div className="absolute bottom-0 -left-16 w-16 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60"></div>
-                                    <div className="absolute bottom-0 -right-16 w-16 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60"></div>
+                                    <div className="absolute bottom-0 -left-16 w-16 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10"></div>
+                                    <div className="absolute bottom-0 -right-16 w-16 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10"></div>
 
                                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
                                         <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
@@ -65,12 +65,12 @@ export function Hero() {
                                 </div>
 
                                 {/* Subtitle */}
-                                <div className="relative border-t border-b border-dashed border-gray-300 dark:border-t-1 dark:border-b-1 dark:border-dashed dark:border-primary/60 p-6 md:p-8 bg-transparent text-center">
+                                <div className="relative border-t border-b border-dashed border-gray-300 dark:border-t-1 dark:border-b-1 dark:border-dashed dark:border-primary/10 p-6 md:p-8 bg-transparent text-center">
                                     {/* Extending lines from subtitle */}
-                                    <div className="absolute top-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60 z-10"></div>
-                                    <div className="absolute top-0 -right-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60 z-10"></div>
-                                    <div className="absolute bottom-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60 z-10"></div>
-                                    <div className="absolute bottom-0 -right-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/60 z-10"></div>
+                                    <div className="absolute top-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10 z-10"></div>
+                                    <div className="absolute top-0 -right-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10 z-10"></div>
+                                    <div className="absolute bottom-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10 z-10"></div>
+                                    <div className="absolute bottom-0 -right-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10 z-10"></div>
 
                                     <p className="text-lg md:text-xl text-muted-foreground dark:text-muted-foreground/90 max-w-4xl mx-auto leading-relaxed">
                                         Passionate about blending design and technology,{" "}
@@ -81,7 +81,7 @@ export function Hero() {
 
                                 {/* CTA Buttons */}
                                 <div className="flex justify-center items-center">
-                                    <div className="relative flex flex-col sm:flex-row gap-6 justify-center items-center p-8 md:p-12  md:w-1/3 w-full border-r border-l border-dashed border-gray-300 dark:border-r-1 dark:border-l-1 dark:border-dashed dark:border-primary/60">
+                                    <div className="relative flex flex-col sm:flex-row gap-6 justify-center items-center p-8 md:p-12  md:w-1/3 w-full border-r border-l border-dashed border-gray-300 dark:border-r-1 dark:border-l-1 dark:border-dashed dark:border-primary/10">
                                         <Button size="lg" className="text-base px-4 py-3 h-12" asChild>
                                             <a href="#projects">
                                                 See My Work
