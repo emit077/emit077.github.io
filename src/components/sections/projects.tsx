@@ -20,7 +20,7 @@ const projects = [
     {
         title: "Indianmentors",
         description: "Indianmentors is the best home tutor provider have connected the 20,000+ tutors with almost 35,000+ students across the globe. It has Student portal, Tutor portal, Business Developer portal And Admin portal",
-        image: "/images/projects/indianmentors.png",
+        image: "./images/projects/indianmentors.png",
         tech: ["Django", "Python", "Vue.js", "HTML5", "SASS", "PostgreSQL"],
         liveUrl: "https://www.indianmentors.in/",
         featured: false,
@@ -30,7 +30,7 @@ const projects = [
     {
         title: "Cashpo",
         description: "A platform which provides you Personal loans upto ₹2 lakhs instantly through a completely paperless process. Key Highlight e-Mandate/NACH, e-KYC, Auto Disbursement etc.",
-        image: "/images/projects/cashpo.png",
+        image: "./images/projects/cashpo.png",
         tech: ["Django", "Python", "Vue.js", "HTML5", "SASS", "PostgreSQL"],
         liveUrl: "https://cashpo.in",
         featured: false,
@@ -40,7 +40,7 @@ const projects = [
     {
         title: "Tutors Factory",
         description: "Tutors Factory the best home tutor provider have connected the 10,000+ tutors with almost 25,000+ students across the nation. It has Student portal, Tutor portal, Business Developer portal And Admin portal",
-        image: "/images/projects/tf.png",
+        image: "./images/projects/tf.png",
         tech: ["Django", "Python", "Vue.js", "HTML5", "SASS", "PostgreSQL"],
         liveUrl: "https://www.tutorsfactory.com",
         featured: false,
@@ -48,7 +48,7 @@ const projects = [
     {
         title: "GimBooks",
         description: "GimBooks is Y combinator funded startup who helps small business owners to create and share Invoice, Quotations, E-Waybills, Payment reminders, Payment receipts and much more!",
-        image: "/images/projects/gim.png",
+        image: "./images/projects/gim.png",
         tech: ["Django", "Python", "HTML5", "JavaScript", "MySQL"],
         liveUrl: "https://www.gimbooks.com/",
         featured: false
@@ -56,7 +56,7 @@ const projects = [
     {
         title: "Medx",
         description: "A Subscription Based B2B medicine delivery service. Delivering 2500+ order in a Day. This platform have some key feature Like Shipment Lifecycle, Live tracking, Wallet and Payout etc.",
-        image: "/images/projects/medx.png",
+        image: "./images/projects/medx.png",
         tech: ["Django", "Python", "Vue.js", "HTML5", "PostgreSQL"],
         liveUrl: "https://themedx.in",
         featured: true
@@ -64,7 +64,7 @@ const projects = [
     {
         title: "Wednicely",
         description: "Wednicely is platform where you can create a e-invitation card within few minutes. It has 1000+ template and 10+ category to choose from",
-        image: "/images/projects/ip.png",
+        image: "./images/projects/ip.png",
         tech: ["Django", "Python", "Vue.js", "HTML5", "PostgreSQL"],
         liveUrl: "https://wednicely.com/",
         featured: false
@@ -72,7 +72,7 @@ const projects = [
     {
         title: "BurnBlack",
         description: "BurnBlack is platform who provide the financial service like ITR, GST filling, Company registration, Billing Software and other Financial Services.",
-        image: "/images/projects/burnblack.png",
+        image: "./images/projects/burnblack.png",
         tech: ["Django", "Python", "Vue.js", "HTML5", "PostgreSQL"],
         liveUrl: "https://burnblack.in/",
         featured: false
@@ -80,7 +80,7 @@ const projects = [
     {
         title: "Rawfit",
         description: "Rawfit is subscription Based health monitoring system based on google fit. Which also provide service to book a activity session.",
-        image: "/images/projects/rawfit.png",
+        image: "./images/projects/rawfit.png",
         tech: ["Django", "Python", "Vue.js", "HTML5", "PostgreSQL"],
         liveUrl: "https://rawfit.in",
         featured: false
@@ -88,7 +88,7 @@ const projects = [
     {
         title: "Digital Ayurved",
         description: "Digital ayurveda is patients management platform for doctors where they can manage all the medical records and drugs record.",
-        image: "/images/projects/digital-ayurved.png",
+        image: "./images/projects/digital-ayurved.png",
         tech: ["Django", "Python", "Vue.js", "Vuetify", "HTML5", "JavaScript", "MySQL"],
         liveUrl: "https://digitalayurved.in/",
         featured: false,
@@ -171,7 +171,7 @@ export function Projects() {
                         Featured Projects
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Here are some of the projects I've worked on, showcasing my expertise
+                        Here are some of the projects I&apos;ve worked on, showcasing my expertise
                         in fullstack development, UI/UX design, and problem-solving.
                     </p>
                 </motion.div>

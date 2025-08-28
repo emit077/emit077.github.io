@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Mail } from "lucide-react"
+// Removed unused imports - Github and Mail are currently commented out
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
@@ -127,6 +127,6 @@ export function Hero() {
                     </div>
                 </div>
             </div>
-        </section >
+        </section>
     )
 }

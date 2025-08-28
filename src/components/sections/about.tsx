@@ -95,7 +95,7 @@ export function About() {
                             </h3>
                             <div className="space-y-4 text-muted-foreground">
                                 <p>
-                                    Started my journey in July 2019, I've been passionate about creating
+                                    Started my journey in July 2019, I&apos;ve been passionate about creating
                                     digital solutions that make a difference. My experience spans across
                                     various industries and technologies.
                                 </p>
@@ -105,7 +105,7 @@ export function About() {
                                     to deployment, I handle every aspect of web development.
                                 </p>
                                 <p>
-                                    When I'm not coding, you can find me exploring new technologies,
+                                    When I&apos;m not coding, you can find me exploring new technologies,
                                     contributing to open source projects, or mentoring aspiring developers.
                                 </p>
                             </div>

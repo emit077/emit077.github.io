@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react"
+import { Mail, MapPin, Send, Github } from "lucide-react"
 import emailjs from '@emailjs/browser'
 
 interface FormData {
@@ -98,11 +98,11 @@ export function Contact() {
                         Get In Touch
                     </Badge>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        Let's Work Together
+                        Let&apos;s Work Together
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Have a project in mind? I'd love to hear about it.
-                        Let's discuss how we can bring your ideas to life.
+                        Have a project in mind? I&apos;d love to hear about it.
+                        Let&apos;s discuss how we can bring your ideas to life.
                     </p>
                 </motion.div>
 
@@ -178,7 +178,7 @@ export function Contact() {
                             <CardHeader>
                                 <CardTitle>Send a Message</CardTitle>
                                 <CardDescription>
-                                    Fill out the form below and I'll get back to you as soon as possible.
+                                    Fill out the form below and I&apos;ll get back to you as soon as possible.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
@@ -252,7 +252,7 @@ export function Contact() {
 
                                     {submitStatus === 'success' && (
                                         <div className="text-green-600 text-center">
-                                            ✅ Message sent successfully! I'll get back to you soon.
+                                            ✅ Message sent successfully! I&apos;ll get back to you soon.
                                         </div>
                                     )}
 

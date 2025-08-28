@@ -10,45 +10,45 @@ const getTechCategories = (isDark: boolean) => [
     {
         category: "Frontend",
         technologies: [
-            { name: "Next.js", image: isDark ? "/images/tech-stack/nextjs.png" : "/images/tech-stack/nextjs-black.png" },
-            { name: "React", image: "/images/tech-stack/react.png" },
-            { name: "Vue.js", image: "/images/tech-stack/vue.png" },
-            { name: "JavaScript", image: "/images/tech-stack/js.png" },
-            { name: "HTML5", image: "/images/tech-stack/html.png" },
-            { name: "SASS", image: "/images/tech-stack/sass.png" },
-            { name: "Nuxt.js", image: "/images/tech-stack/nuxt.png" },
-            { name: "Vuetify", image: "/images/tech-stack/vuetify.png" },
-            { name: "jQuery", image: "/images/tech-stack/jquery.png" },
+            { name: "Next.js", image: isDark ? "./images/tech-stack/nextjs.png" : "./images/tech-stack/nextjs-black.png" },
+            { name: "React", image: "./images/tech-stack/react.png" },
+            { name: "Vue.js", image: "./images/tech-stack/vue.png" },
+            { name: "JavaScript", image: "./images/tech-stack/js.png" },
+            { name: "HTML5", image: "./images/tech-stack/html.png" },
+            { name: "SASS", image: "./images/tech-stack/sass.png" },
+            { name: "Nuxt.js", image: "./images/tech-stack/nuxt.png" },
+            { name: "Vuetify", image: "./images/tech-stack/vuetify.png" },
+            { name: "jQuery", image: "./images/tech-stack/jquery.png" },
         ]
     },
     {
         category: "Backend & Database",
         technologies: [
-            { name: "Python", image: "/images/tech-stack/python.png" },
-            { name: "Django", image: "/images/tech-stack/django.png" },
-            { name: "PostgreSQL", image: "/images/tech-stack/postgres.png" },
-            { name: "MySQL", image: "/images/tech-stack/mysql.png" },
-            { name: "Firebase", image: "/images/tech-stack/firebase.png" },
+            { name: "Python", image: "./images/tech-stack/python.png" },
+            { name: "Django", image: "./images/tech-stack/django.png" },
+            { name: "PostgreSQL", image: "./images/tech-stack/postgres.png" },
+            { name: "MySQL", image: "./images/tech-stack/mysql.png" },
+            { name: "Firebase", image: "./images/tech-stack/firebase.png" },
         ]
     },
     {
         category: "DevOps & Tools",
         technologies: [
-            { name: "Git", image: "/images/tech-stack/git.png" },
-            { name: "AWS", image: "/images/tech-stack/aws.png" },
-            { name: "Ubuntu", image: "/images/tech-stack/ubuntu.png" },
-            { name: "Nginx", image: "/images/tech-stack/nginx.png" },
-            { name: "Figma", image: "/images/tech-stack/figma.png" },
+            { name: "Git", image: "./images/tech-stack/git.png" },
+            { name: "AWS", image: "./images/tech-stack/aws.png" },
+            { name: "Ubuntu", image: "./images/tech-stack/ubuntu.png" },
+            { name: "Nginx", image: "./images/tech-stack/nginx.png" },
+            { name: "Figma", image: "./images/tech-stack/figma.png" },
         ]
     },
     {
         category: "AI & Design",
         technologies: [
-            { name: "Claude", image: "/images/tech-stack/claude.png" },
-            { name: "GPT", image: "/images/tech-stack/gpt.png" },
-            { name: "Gemini", image: "/images/tech-stack/gemini.png" },
-            { name: "GitHub Copilot", image: isDark ? "/images/tech-stack/github-copilot.png" : "/images/tech-stack/github-copilate-black.png" },
-            { name: "Midjourney", image: isDark ? "/images/tech-stack/mid-journey.png" : "/images/tech-stack/mid-journey-black.png" },
+            { name: "Claude", image: "./images/tech-stack/claude.png" },
+            { name: "GPT", image: "./images/tech-stack/gpt.png" },
+            { name: "Gemini", image: "./images/tech-stack/gemini.png" },
+            { name: "GitHub Copilot", image: isDark ? "./images/tech-stack/github-copilot.png" : "./images/tech-stack/github-copilate-black.png" },
+            { name: "Midjourney", image: isDark ? "./images/tech-stack/mid-journey.png" : "./images/tech-stack/mid-journey-black.png" },
         ]
     }
 ]
