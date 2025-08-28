@@ -13,7 +13,7 @@ export function ThemeToggle() {
     const { isThemeLoading, toggleThemeWithLoading } = useThemeLoading()
 
     const handleThemeToggle = () => {
-        const isDarkMode = theme === "light" // Will be switching TO dark mode
+        // const isDarkMode = theme === "light" // Will be switching TO dark mode
         toggleThemeWithLoading(() => {
             setTheme(theme === "light" ? "dark" : "light")
         })
@@ -25,7 +25,7 @@ export function ThemeToggle() {
                 variant="outline"
                 size="icon"
                 onClick={handleThemeToggle}
-                className="relative"
+                className="relative focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 disabled={isThemeLoading}
             >
                 <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

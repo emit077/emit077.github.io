@@ -1,17 +1,13 @@
 "use client"
 
-// Removed unused imports - Github and Mail are currently commented out
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
     return (
         <section id="home" className="min-h-screen flex items-center justify-center relative py-20 bg-gradient-to-br from-background via-background to-muted/5 dark:to-muted/10">
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-
-                {/* Main container with proper centering */}
                 <div className="flex items-center justify-center min-h-[80vh]">
                     <div className="relative w-full max-w-5xl">
-
                         {/* Corner markers with extending lines */}
                         <div className="absolute -top-8 -left-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/10 rounded-full">
                         </div>
@@ -21,6 +17,7 @@ export function Hero() {
                         </div>
                         <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-white dark:bg-transparent border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/10 rounded-full">
                         </div>
+                        
                         {/* Extending lines from corners */}
                         <div className="absolute -top-20 left-0 w-0 h-20 border-l border-dashed border-gray-300 dark:border-l-1 dark:border-dashed dark:border-primary/10"></div>
                         <div className="absolute top-0 -left-20 w-20 h-0 border-t border-dashed border-gray-300 dark:border-t-1 dark:border-dashed dark:border-primary/10"></div>
@@ -40,10 +37,7 @@ export function Hero() {
 
                         {/* Main content container */}
                         <div className="relative border border-dashed border-gray-300 dark:border-1 dark:border-dashed dark:border-primary/10 bg-transparent backdrop-blur-sm">
-
-                            {/* Content sections */}
                             <div className="flex flex-col">
-
                                 {/* Main headline */}
                                 <div className="relative border-b border-dashed border-gray-300 dark:border-b-1 dark:border-dashed dark:border-primary/10 p-8 md:p-12 bg-transparent text-center">
                                     {/* Extending lines from headline */}
@@ -81,47 +75,20 @@ export function Hero() {
 
                                 {/* CTA Buttons */}
                                 <div className="flex justify-center items-center">
-                                    <div className="relative flex flex-col sm:flex-row gap-6 justify-center items-center p-8 md:p-12  md:w-1/3 w-full border-r border-l border-dashed border-gray-300 dark:border-r-1 dark:border-l-1 dark:border-dashed dark:border-primary/10">
-                                        <Button size="lg" className="text-base px-4 py-3 h-12" asChild>
+                                    <div className="relative flex flex-col sm:flex-row gap-6 justify-center items-center p-8 md:p-12 md:w-1/3 w-full border-r border-l border-dashed border-gray-300 dark:border-r-1 dark:border-l-1 dark:border-dashed dark:border-primary/10">
+                                        <Button size="lg" className="text-base px-4 py-3 h-12 hover:scale-105 transition-transform" asChild>
                                             <a href="#projects">
                                                 See My Work
                                             </a>
                                         </Button>
 
-                                        <Button variant="outline" size="lg" className="text-base px-4 py-3 h-12" asChild>
+                                        <Button variant="outline" size="lg" className="text-base px-4 py-3 h-12 hover:scale-105 transition-transform" asChild>
                                             <a href="#contact">
                                                 Contact Me
                                             </a>
                                         </Button>
                                     </div>
                                 </div>
-
-                                {/* Social buttons below CTA */}
-                                {/* <div className="flex justify-center items-center">
-                                    <div className="relative flex flex-col sm:flex-row gap-6 justify-center items-center py-4 md:py-6 w-1/3 border-r border-l border-dashed border-gray-300 dark:border-gray-600">
-
-                                        <Button variant="ghost" size="icon" asChild>
-                                            <a
-                                                href="https://github.com/emit077"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                aria-label="GitHub"
-                                                className="hover:bg-muted transition-colors"
-                                            >
-                                                <Github className="h-5 w-5" />
-                                            </a>
-                                        </Button>
-                                        <Button variant="ghost" size="icon" asChild>
-                                            <a
-                                                href="#contact"
-                                                aria-label="Contact"
-                                                className="hover:bg-muted transition-colors"
-                                            >
-                                                <Mail className="h-5 w-5" />
-                                            </a>
-                                        </Button>
-                                    </div> 
-                            </div>*/}
                             </div>
                         </div>
                     </div>

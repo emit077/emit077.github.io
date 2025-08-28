@@ -83,7 +83,7 @@ const TechCard = ({ tech, index }: { tech: { name: string, image: string }, inde
 )
 
 export function TechStack() {
-    const { theme, resolvedTheme, systemTheme } = useTheme()
+    const { resolvedTheme, systemTheme } = useTheme()
     const [mounted, setMounted] = React.useState(false)
 
     React.useEffect(() => {

@@ -10,11 +10,12 @@ const geistSans = Geist({
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://emit077.github.io"),
   title: "Amit Sahu - Web Designer & Fullstack Developer",
   description: "Passionate about visual design and technology. I specialize in fullstack development and UI/UX design, building elegant and professional user interfaces and websites.",
   keywords: ["web developer", "fullstack developer", "UI/UX designer", "Next.js", "React", "Python", "Django"],

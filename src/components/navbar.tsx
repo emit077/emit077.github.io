@@ -12,17 +12,34 @@ const navigation = [
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Tech Stack", href: "#tech-stack" },
+    { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
 ]
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const [activeSection, setActiveSection] = useState("home")
 
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 50
             setScrolled(isScrolled)
+
+            // Update active section based on scroll position
+            const sections = navigation.map(item => item.href.replace('#', ''))
+            const currentSection = sections.find(section => {
+                const element = document.getElementById(section)
+                if (element) {
+                    const rect = element.getBoundingClientRect()
+                    return rect.top <= 100 && rect.bottom >= 100
+                }
+                return false
+            })
+            
+            if (currentSection) {
+                setActiveSection(currentSection)
+            }
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -46,7 +63,7 @@ export function Navbar() {
                         animate={{ opacity: 1 }}
                         className="flex-shrink-0"
                     >
-                        <Link href="#home" className="text-2xl font-bold">
+                        <Link href="#home" className="text-2xl font-bold hover:text-primary transition-colors">
                             AS
                         </Link>
                     </motion.div>
@@ -54,15 +71,30 @@ export function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-8">
-                            {navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium"
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
+                            {navigation.map((item) => {
+                                const isActive = activeSection === item.href.replace('#', '')
+                                return (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        className={`relative text-sm font-medium transition-all duration-200 hover:text-primary ${
+                                            isActive 
+                                                ? "text-primary" 
+                                                : "text-foreground/80 hover:text-foreground"
+                                        }`}
+                                    >
+                                        {item.name}
+                                        {isActive && (
+                                            <motion.div
+                                                layoutId="activeSection"
+                                                className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
+                                                initial={false}
+                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                            />
+                                        )}
+                                    </Link>
+                                )
+                            })}
                         </div>
                     </div>
 
@@ -78,6 +110,7 @@ export function Navbar() {
                             variant="ghost"
                             size="icon"
                             onClick={() => setIsOpen(!isOpen)}
+                            className="hover:scale-105 transition-transform"
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </Button>
@@ -93,16 +126,23 @@ export function Navbar() {
                         className="md:hidden"
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/95 backdrop-blur-md rounded-lg mt-2">
-                            {navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className="text-foreground/80 hover:text-foreground block px-3 py-2 text-base font-medium transition-colors duration-200"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
+                            {navigation.map((item) => {
+                                const isActive = activeSection === item.href.replace('#', '')
+                                return (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        className={`block px-3 py-2 text-base font-medium transition-all duration-200 ${
+                                            isActive 
+                                                ? "text-primary bg-primary/10 rounded-md" 
+                                                : "text-foreground/80 hover:text-foreground hover:bg-muted/50 rounded-md"
+                                        }`}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                )
+                            })}
                         </div>
                     </motion.div>
                 )}

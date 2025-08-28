@@ -69,7 +69,7 @@ export function About() {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
                         >
-                            <Card className="text-center hover:shadow-lg dark:hover:shadow-xl transition-shadow duration-300 dark:bg-card/50 dark:border-border/30">
+                            <Card className="text-center hover:shadow-lg dark:hover:shadow-xl hover:scale-105 transition-all duration-300 hover:border-primary/30 dark:bg-card/50 dark:border-border/30">
                                 <CardContent className="p-8">
                                     <stat.icon className="h-12 w-12 mx-auto mb-4 text-primary dark:text-primary" />
                                     <h3 className="text-3xl font-bold mb-2 dark:text-foreground">{stat.value}</h3>

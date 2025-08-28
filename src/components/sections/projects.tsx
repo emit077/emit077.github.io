@@ -123,7 +123,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
             </div>
 
             <CardHeader>
-                <CardTitle className="group-hover:text-primary dark:group-hover:text-primary transition-colors dark:text-foreground">
+                <CardTitle className="group-hover:text-primary dark:group-hover:text-primary transition-all duration-300 hover:scale-105 dark:text-foreground">
                     {project.title}
                 </CardTitle>
                 <CardDescription className="text-sm leading-relaxed dark:text-muted-foreground/80">
