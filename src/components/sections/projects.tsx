@@ -89,8 +89,17 @@ const projects = [
         title: "Digital Ayurved",
         description: "Digital ayurveda is patients management platform for doctors where they can manage all the medical records and drugs record.",
         image: "./images/projects/digital-ayurved.png",
-        tech: ["Django", "Python", "Vue.js", "Vuetify", "HTML5", "JavaScript", "MySQL"],
+        tech: ["Django", "Python", "Vue.js", "Vuetify", "HTML5", "JavaScript", "PostgreSQL"],
         liveUrl: "https://digitalayurved.in/",
+        featured: false,
+        fullHeight: true
+    },
+    {
+        title: "Chai of Wasseypur",
+        description: "Chai of Wasseypur is a website for a tea café in Haridwar, Uttarakhand, created especially for franchise promotion.",
+        image: "./images/projects/chai-of-wasseypur.png",
+        tech: ["Next.js", "Tailwind CSS", "Shadcn UI"],
+        liveUrl: "https://chaiofwasseypur.in/",
         featured: false,
         fullHeight: true
     },
