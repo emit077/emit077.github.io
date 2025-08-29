@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { loadingStateManager } from "@/lib/loading-state"
 
 // Hook specifically for theme toggle loading
 export function useThemeLoading() {
@@ -23,19 +24,20 @@ export function useThemeLoading() {
 
 // Hook for page loading
 export function usePageLoading() {
-    const [isPageLoading, setIsPageLoading] = useState(true)
-
     useEffect(() => {
-        // Simulate page loading time
+        // Show page loading on mount
+        loadingStateManager.showLoading('page', 'Loading your experience...')
+
+        // Hide after delay
         const timer = setTimeout(() => {
-            setIsPageLoading(false)
-        }, 1500) // 2 seconds loading time
+            loadingStateManager.hideLoading()
+        }, 1500)
 
         return () => clearTimeout(timer)
     }, [])
 
     return {
-        isPageLoading,
-        setIsPageLoading
+        isPageLoading: false, // This is now handled by global state
+        setIsPageLoading: () => { } // No longer needed
     }
 }
